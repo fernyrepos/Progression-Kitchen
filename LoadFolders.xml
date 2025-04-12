@@ -1,0 +1,19 @@
+<loadFolders>
+  <v1.5>
+    <li>/</li>
+    <li IfModActive="dankpyon.medieval.overhaul">Mods and Shit/Medieval Overhaul</li>
+    <li IfModActive="det.sbdelights">Mods and Shit/Stoneborn Delights</li>
+    <li IfModActive="vanillaexpanded.vcookestews">Mods and Shit/VCE Stews</li>
+    <li IfModActive="vanillaexpanded.vcookesushi">Mods and Shit/VCE Sushi</li>
+    <li IfModActive="vanillaexpanded.vbrewe">Mods and Shit/VE Brewing</li>
+    <li IfModActive="vanillaexpanded.vcooke">Mods and Shit/VE Cooking</li>
+    <li IfModActive="oskarpotocki.vfe.classical">Mods and Shit/VFE Classical</li>
+    <li IfModActive="vanillaexpanded.vfeproduction">Mods and Shit/VFE Production</li>
+    <li IfModActive="syrchalis.processor.framework">Mods and Shit/Processor Framework</li>
+    <li IfModActive="det.keshig">Mods and Shit/Keshig</li>
+    <li IfModActive="sarg.alphacrafts">Mods and Shit/Alpha Crafts</li>
+    <li IfModActive="OskarPotocki.VFE.Medieval2">Mods and Shit/VFE Medieval 2</li>
+    <li IfModActive="vanillaexpanded.vbrewecandt">Mods and Shit/VBE CAT</li>
+    <li IfModActive="VanillaExpanded.VCookEHaute">Mods and Shit/VCE Haute</li>
+  </v1.5>
+</loadFolders>

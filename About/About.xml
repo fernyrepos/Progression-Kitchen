@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Progression: Kitchen</name>
+	<author>ferny</author>
+	<packageId>ferny.progressionkitchen</packageId>
+	<supportedVersions>
+		<li>1.5</li>
+	</supportedVersions>
+	<modDependencies>
+		<li>
+			<packageId>ferny.ReplaceLib</packageId>
+			<displayName>ReplaceLib</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2329011599</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<description>Integrates food into the grander Rimworld ecosystem.</description>
+	<loadAfter>
+		<li>Ludeon.Rimworld</li>
+		<li>Ludeon.Rimworld.Royalty</li>
+		<li>Ludeon.Rimworld.Ideology</li>
+		<li>Ludeon.Rimworld.Biotech</li>
+		<li>Ludeon.Rimworld.Anomaly</li>
+		<li>dankpyon.medieval.overhaul</li>
+		<li>det.sbdelights</li>
+		<li>vanillaexpanded.vcookestews</li>
+		<li>vanillaexpanded.vcookesushi</li>
+		<li>vanillaexpanded.vbrewe</li>
+		<li>vanillaexpanded.vbrewecandt</li>
+		<li>vanillaexpanded.vcooke</li>
+		<li>oskarpotocki.vfe.classical</li>
+		<li>vanillaexpanded.vfeproduction</li>
+		<li>syrchalis.processor.framework</li>
+		<li>det.keshig</li>
+		<li>ferny.replacelib</li>
+		<li>sarg.alphacrafts</li>
+		<li>OskarPotocki.VFE.Medieval2</li>
+		<li>VanillaExpanded.VCookEHaute</li>
+	</loadAfter>
+</ModMetaData>

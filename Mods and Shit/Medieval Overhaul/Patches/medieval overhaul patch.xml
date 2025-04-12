@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- Smoker no rustic furn please! -->
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[defName="DankPyon_Smoker"]/researchPrerequisites</xpath>
+        <value>
+		<researchPrerequisites>
+			<li>DankPyon_Smoker</li>
+		</researchPrerequisites>
+        </value>
+    </Operation>
+
+
+	<!--Grain and bread is the basis of human civilization-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Oven"]/techLevel</xpath>
+		<value>
+			<techLevel>Neolithic</techLevel>
+		</value>
+	</Operation>
+
+<!-- Rusting cooking table -->
+    <Operation Class="PatchOperationConditional">
+    <success>Always</success>
+        <xpath>/Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/researchPrerequisites</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>DankPyon_BasicCooking</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+            </operations>
+        </match>
+        <nomatch Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="DankPyon_RusticCookingTable"]</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>DankPyon_BasicCooking</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+            </operations>
+        </nomatch>
+    </Operation>
+
+
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/label</xpath>
+        <value>
+            <label>basic cooking table</label>
+        </value>
+    </Operation>
+
+<!-- Rusting oven -->
+    <Operation Class="PatchOperationConditional">
+    <success>Always</success>
+        <xpath>/Defs/ThingDef[defName="DankPyon_StoneOven"]/researchPrerequisites</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="DankPyon_StoneOven"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>DankPyon_IntermediateCooking</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+            </operations>
+        </match>
+        <nomatch Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="DankPyon_StoneOven"]</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>DankPyon_IntermediateCooking</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+            </operations>
+        </nomatch>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[defName="DankPyon_StoneOven"]/label</xpath>
+        <value>
+            <label>oven</label>
+        </value>
+    </Operation>
+
+
+
+                        <!-- VE COOKING OVERLAP -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Cooking Expanded</li>
+		</mods>
+            <match Class="PatchOperationSequence">
+                <operations>
+
+
+                <li Class="PatchOperationRemove">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="VCE_MakeSalt"]</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="VCE_MakeSaltfromBlocks"]</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <success>Always</success>
+                    <xpath>Defs/ResearchProjectDef[defName="VCE_CheeseMaking"]</xpath>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                    <ReplaceLib.ReplacerDef>
+                        <defName>ProgKitchen_MedievalOverhaul_VECooking</defName>
+                        <replacers>
+                            <li>
+                                <replace>VCE_CheesePress</replace>
+                                <with>DankPyon_Presser</with>
+                            </li>
+                            <li>
+                                <replace>VCE_Salt</replace>
+                                <with>DankPyon_Salt</with>
+                            </li>
+                            <li>
+                                <replace>VCE_Cheese</replace>
+                                <with>DankPyon_MealCheese</with>
+                            </li>
+                        </replacers>
+                    </ReplaceLib.ReplacerDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>//ThingDef[defName="DankPyon_Presser"]//li[@Class="ProcessorFramework.CompProperties_Processor"]/processes</xpath>
+                    <value>
+                        <li>Ferny_NightCheeseProcess</li>
+                        <li>Ferny_BlueCheeseProcess</li>
+                        <li>Ferny_GowCheeseProcess</li>
+                        <li>Ferny_WeirdCheeseProcess</li>
+                        <li>Ferny_MechaCheeseProcess</li>
+                        <li>Ferny_BearffaloCheeseProcess</li>
+                        <li>Ferny_ThrumffaloCheeseProcess</li>
+                        <li>Ferny_LumpyCheeseProcess</li>
+                        <li>Ferny_ChickenffaloCheeseProcess</li>
+                        <li>Ferny_BrownCheeseProcess</li>
+                        <li>Ferny_HairyCheeseProcess</li>
+                        <li>Ferny_RatCheeseProcess</li>
+                        <li>Ferny_ParaceramuffaloBrieProcess</li>
+                        <li>Ferny_GreenCheeseProcess</li>
+                    </value>
+                </li>
+
+
+                                        <!-- ALPHA ANIMALS CHEESE!!!!!! -->
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>Alpha Animals</li>
+                    </mods>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs</xpath>
+                                <value>
+                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
+                                    <defName>Ferny_NightCheeseProcess</defName>
+                                    <thingDef>VCE_NightCheese</thingDef>
+                                    <ingredientFilter>
+                                        <thingDefs>
+                                            <li>AA_NightMilk</li>
+                                        </thingDefs>
+                                    </ingredientFilter>
+                                </ProcessorFramework.ProcessDef>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs</xpath>
+                                <value>
+                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
+                                    <defName>Ferny_BlueCheeseProcess</defName>
+                                    <thingDef>VCE_BlueCheese</thingDef>
+                                    <ingredientFilter>
+                                        <thingDefs>
+                                            <li>AA_BlueMilk</li>
+                                        </thingDefs>
+                                    </ingredientFilter>
+                                </ProcessorFramework.ProcessDef>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs</xpath>
+                                <value>
+                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
+                                    <defName>Ferny_GowCheeseProcess</defName>
+                                    <thingDef>VCE_GowCheese</thingDef>
+                                    <ingredientFilter>
+                                        <thingDefs>
+                                            <li>AA_GowMilk</li>
+                                        </thingDefs>
+                                    </ingredientFilter>
+                                </ProcessorFramework.ProcessDef>
+                                </value>
+                            </li>
+                        </operations>
+                </match>
+                </li>
+
+
+
+
+                                        <!-- VE GENETICS CHEESE!!!!!! -->
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>Vanilla Genetics Expanded</li>
+                    </mods>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs</xpath>
+                                <value>
+                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
+                                    <defName>Ferny_WeirdCheeseProcess</defName>
+                                    <thingDef>VCE_WeirdCheese</thingDef>
+                                    <ingredientFilter>
+                                        <thingDefs>
+                                            <li>GR_WeirdMilk</li>
+                                        </thingDefs>
+                                    </ingredientFilter>
+                                </ProcessorFramework.ProcessDef>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs</xpath>
+                                <value>
+                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
+                                    <defName>Ferny_MechaCheeseProcess</defName>
+                                    <thingDef>VCE_MechaCheese</thingDef>
+                                    <ingredientFilter>
+                                        <thingDefs>
+                                            <li>GR_MechaMilk</li>
+                                        </thingDefs>
+                                    </ingredientFilter>
+                                </ProcessorFramework.ProcessDef>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs</xpath>
+                                <value>
+                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
+                                    <defName>Ferny_BearffaloCheeseProcess</defName>
+                                    <thingDef>VCE_BearffaloCheese</thingDef>
+                                    <ingredientFilter>
+                                        <thingDefs>
+                                            <li>GR_BearffaloMilk</li>
+                                        </thingDefs>
+                                    </ingredientFilter>
+                                </ProcessorFramework.ProcessDef>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs</xpath>
+                                <value>
+                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
+                                    <defName>Ferny_ThrumffaloCheeseProcess</defName>
+                                    <thingDef>VCE_ThrumffaloGouda</thingDef>
+                                    <ingredientFilter>
+                                        <thingDefs>
+                                            <li>GR_ThrumffaloMilk</li>
+                                        </thingDefs>
+                                    </ingredientFilter>
+                                </ProcessorFramework.ProcessDef>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs</xpath>
+                                <value>
+                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
+                                    <defName>Ferny_LumpyCheeseProcess</defName>
+                                    <thingDef>VCE_LumpyCheese</thingDef>
+                                    <ingredientFilter>
+                                        <thingDefs>
+                                            <li>GR_MuffalochickenMilk</li>
+                                        </thingDefs>
+                                    </ingredientFilter>
+                                </ProcessorFramework.ProcessDef>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs</xpath>
+                                <value>
+                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
+                                    <defName>Ferny_ChickenffaloCheeseProcess</defName>
+                                    <thingDef>VCE_ChickenffaloCheese</thingDef>
+                                    <ingredientFilter>
+                                        <thingDefs>
+                                            <li>GR_ChickenffaloMilk</li>
+                                        </thingDefs>
+                                    </ingredientFilter>
+                                </ProcessorFramework.ProcessDef>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs</xpath>
+                                <value>
+                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
+                                    <defName>Ferny_BrownCheeseProcess</defName>
+                                    <thingDef>VCE_BrownCheese</thingDef>
+                                    <ingredientFilter>
+                                        <thingDefs>
+                                            <li>GR_MuffalobearMilk</li>
+                                        </thingDefs>
+                                    </ingredientFilter>
+                                </ProcessorFramework.ProcessDef>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs</xpath>
+                                <value>
+                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
+                                    <defName>Ferny_HairyCheeseProcess</defName>
+                                    <thingDef>VCE_HairyCheese</thingDef>
+                                    <ingredientFilter>
+                                        <thingDefs>
+                                            <li>GR_WolffaloMilk</li>
+                                        </thingDefs>
+                                    </ingredientFilter>
+                                </ProcessorFramework.ProcessDef>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs</xpath>
+                                <value>
+                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
+                                    <defName>Ferny_RatCheeseProcess</defName>
+                                    <thingDef>VCE_RatCheese</thingDef>
+                                    <ingredientFilter>
+                                        <thingDefs>
+                                            <li>GR_RatMilk</li>
+                                        </thingDefs>
+                                    </ingredientFilter>
+                                </ProcessorFramework.ProcessDef>
+                                </value>
+                            </li>
+                            <li Class="PatchOperationFindMod">
+                                <mods>
+                                    <li>Megafauna</li>
+                                </mods>
+                                <match Class="PatchOperationSequence">
+                                    <operations>
+                                        <li Class="PatchOperationAdd">
+                                            <xpath>/Defs</xpath>
+                                            <value>
+                                            <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
+                                                <defName>Ferny_ParaceramuffaloBrieProcess</defName>
+                                                <thingDef>VCE_ParaceramuffaloBrie</thingDef>
+                                                <ingredientFilter>
+                                                    <thingDefs>
+                                                        <li>GR_ParaMilk</li>
+                                                    </thingDefs>
+                                                </ingredientFilter>
+                                            </ProcessorFramework.ProcessDef>
+                                            </value>
+                                        </li>
+
+                                        <li Class="PatchOperationAdd">
+                                            <xpath>/Defs</xpath>
+                                            <value>
+                                            <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
+                                                <defName>Ferny_GreenCheeseProcess</defName>
+                                                <thingDef>VCE_GreenCheese</thingDef>
+                                                <ingredientFilter>
+                                                    <thingDefs>
+                                                        <li>GR_GreenMilk</li>
+                                                    </thingDefs>
+                                                </ingredientFilter>
+                                            </ProcessorFramework.ProcessDef>
+                                            </value>
+                                        </li>
+                                    </operations>
+                            </match>
+                            </li>
+                        </operations>
+                </match>
+                </li>
+
+
+                                        <!-- SEARING STUFF -->
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="DankPyon_Grill"]/label</xpath>
+                    <value>
+                        <label>searing brazier</label>
+                    </value>
+                </li>
+
+    
+
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_MealGrilledSausages"]/label</xpath>
+                    <value>
+                        <label>seared sausages</label>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_MealGrilledCheese"]/label</xpath>
+                    <value>
+                        <label>seared cheese</label>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_MealGrilledSkewers"]/label</xpath>
+                    <value>
+                        <label>seared skewers</label>
+                    </value>
+                </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausages"]/label</xpath>
+                    <value>
+                        <label>sear sausages</label>
+                    </value>
+                </li> 
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausages"]/description</xpath>
+                    <value>
+                        <description>Sear a straightforward meal from sausages.</description>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausages"]/jobString</xpath>
+                    <value>
+                        <jobString>Searing sausages.</jobString>
+                    </value>
+                </li>
+
+
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausagesBulk"]/label</xpath>
+                    <value>
+                        <label>sear sausages x5</label>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausagesBulk"]/description</xpath>
+                    <value>
+                        <description>Sear a straightforward meal from sausages in bulk.</description>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausagesBulk"]/jobString</xpath>
+                    <value>
+                        <jobString>Searing 5 sausages.</jobString>
+                    </value>
+                </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheese"]/label</xpath>
+                    <value>
+                        <label>sear cheese</label>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheese"]/description</xpath>
+                    <value>
+                        <description>Sear cheese into a delicious meal.</description>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheese"]/jobString</xpath>
+                    <value>
+                        <jobString>Searing cheese.</jobString>
+                    </value>
+                </li>
+
+
+
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheeseBulk"]/label</xpath>
+                    <value>
+                        <label>sear cheese x5</label>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheeseBulk"]/description</xpath>
+                    <value>
+                        <jobString>Sear cheese in bulk into delicious meals.</jobString>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheeseBulk"]/jobString</xpath>
+                    <value>
+                        <jobString>Searing cheese.</jobString>
+                    </value>
+                </li>
+
+
+
+
+
+
+
+
+
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSkewers"]/label</xpath>
+                    <value>
+                        <label>sear skewers</label>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausages"]/description</xpath>
+                    <value>
+                        <description>Sear a delicious meal from meat.</description>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausages"]/jobString</xpath>
+                    <value>
+                        <jobString>Searing skewers.</jobString>
+                    </value>
+                </li>
+
+
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSkewersBulk"]/label</xpath>
+                    <value>
+                        <label>sear skewers x5</label>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSkewersBulk"]/description</xpath>
+                    <value>
+                        <description>Sear delicious meals from meat in bulk.</description>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSkewersBulk"]/jobString</xpath>
+                    <value>
+                        <jobString>Searing 5 skewers.</jobString>
+                    </value>
+                </li>
+
+
+
+                </operations>
+		</match>
+	</Operation>
+
+
+
+
+
+
+
+
+
+                <Operation Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="DankPyon_ButchersBlock"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Ferny_Kitchen</designationCategory>
+                    </value>
+                </Operation>
+                <Operation Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="DankPyon_DryingRack_Small"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Ferny_Kitchen</designationCategory>
+                    </value>
+                </Operation>
+                <Operation Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="DankPyon_DryingRack_Big"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Ferny_Kitchen</designationCategory>
+                    </value>
+                </Operation>
+                <Operation Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="DankPyon_Presser"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Ferny_Kitchen</designationCategory>
+                    </value>
+                </Operation>
+                <Operation Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="DankPyon_Smoker"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Ferny_Kitchen</designationCategory>
+                    </value>
+                </Operation>
+                <Operation Class="PatchOperationAdd">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="DankPyon_RusticCookingTable"]</xpath>
+                    <value>
+                        <designationCategory>Ferny_Kitchen</designationCategory>
+                    </value>
+                </Operation>
+                <Operation Class="PatchOperationAdd">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="DankPyon_StoneOven"]</xpath>
+                    <value>
+                        <designationCategory>Ferny_Kitchen</designationCategory>
+                    </value>
+                </Operation>
+                <Operation Class="PatchOperationAdd">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="DankPyon_StoneOvenLarge"]</xpath>
+                    <value>
+                        <designationCategory>Ferny_Kitchen</designationCategory>
+                    </value>
+                </Operation>
+                <Operation Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="DankPyon_Grill"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Ferny_Kitchen</designationCategory>
+                    </value>
+                </Operation>
+                <Operation Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Ferny_Kitchen</designationCategory>
+                    </value>
+                </Operation>
+                <Operation Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="DankPyon_Millstone"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Ferny_Kitchen</designationCategory>
+                    </value>
+                </Operation>
+                <Operation Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="DankPyon_SlopPot"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Ferny_Kitchen</designationCategory>
+                    </value>
+                </Operation>
+                <Operation Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="DankPyon_SlopPot_Stew"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Ferny_Kitchen</designationCategory>
+                    </value>
+                </Operation>
+                <Operation Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="DankPyon_SlopPot_Fondue"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Ferny_Kitchen</designationCategory>
+                    </value>
+                </Operation>
+                <Operation Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="DankPyon_WindMill"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Ferny_Kitchen</designationCategory>
+                    </value>
+                </Operation>
+
+
+
+
+
+</Patch>

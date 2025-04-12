@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+                <Operation Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="VCE_SushiPrepTable"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Ferny_Kitchen</designationCategory>
+                    </value>
+                </Operation>
+                <Operation Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="VCE_SoyFermenter"]/designationCategory</xpath>
+                    <value>
+                        <designationCategory>Ferny_Kitchen</designationCategory>
+                    </value>
+                </Operation>
+                
+    <Operation Class="PatchOperationConditional">
+    <success>Always</success>
+        <xpath>/Defs/ThingDef[defName="VCE_SushiPrepTable"]/researchPrerequisites</xpath>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="VCE_SushiPrepTable"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>Ferny_Sushi</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+            </operations>
+        </match>
+        <nomatch Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="VCE_SushiPrepTable"]</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>Ferny_Sushi</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+            </operations>
+        </nomatch>
+    </Operation>
+
+</Patch>
