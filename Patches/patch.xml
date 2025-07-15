@@ -16,6 +16,8 @@
 
 
 <!-- Reorganize -->
+
+
                 <Operation Class="PatchOperationReplace">
                     <success>Always</success>
                     <xpath>Defs/ThingDef[defName="ElectricStove"]/designationCategory</xpath>
@@ -23,6 +25,8 @@
                         <designationCategory>Ferny_Kitchen</designationCategory>
                     </value>
                 </Operation>
+
+
                 <Operation Class="PatchOperationReplace">
                     <success>Always</success>
                     <xpath>Defs/ThingDef[defName="FueledStove"]/designationCategory</xpath>
@@ -30,6 +34,9 @@
                         <designationCategory>Ferny_Kitchen</designationCategory>
                     </value>
                 </Operation>
+
+
+
                 <Operation Class="PatchOperationReplace">
                     <success>Always</success>
                     <xpath>Defs/ThingDef[defName="NutrientPasteDispenser"]/designationCategory</xpath>
@@ -37,6 +44,8 @@
                         <designationCategory>Ferny_Kitchen</designationCategory>
                     </value>
                 </Operation>
+
+
                 <Operation Class="PatchOperationReplace">
                     <success>Always</success>
                     <xpath>Defs/ThingDef[defName="ButcherSpot"]/designationCategory</xpath>
@@ -44,6 +53,9 @@
                         <designationCategory>Ferny_Kitchen</designationCategory>
                     </value>
                 </Operation>
+
+
+
                 <Operation Class="PatchOperationReplace">
                     <success>Always</success>
                     <xpath>Defs/ThingDef[defName="TableButcher"]/designationCategory</xpath>
@@ -51,6 +63,9 @@
                         <designationCategory>Ferny_Kitchen</designationCategory>
                     </value>
                 </Operation>
+
+
+
                 <Operation Class="PatchOperationReplace">
                     <success>Always</success>
                     <xpath>Defs/ThingDef[defName="Brewery"]/designationCategory</xpath>
@@ -58,4 +73,7 @@
                         <designationCategory>Ferny_Kitchen</designationCategory>
                     </value>
                 </Operation>
+
+
+
 </Patch>
