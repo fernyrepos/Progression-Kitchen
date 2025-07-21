@@ -97,8 +97,6 @@
         </value>
     </Operation>
 
-
-
                         <!-- VE COOKING OVERLAP -->
 	<Operation Class="PatchOperationFindMod">
 		<mods>
@@ -120,16 +118,23 @@
                     <success>Always</success>
                     <xpath>Defs/ResearchProjectDef[defName="VCE_CheeseMaking"]</xpath>
                 </li>
+                <li Class="PatchOperationRemove">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="VCE_CheesePress"]/researchPrerequisites</xpath>
+                </li>
+                <!-- <li Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ThingDef[defName="VCE_CheesePress"]/label</xpath>
+                                <value>
+                                    <label>This is not supposed to be here</label>
+                                </value>
+                </li> -->
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs</xpath>
                     <value>
                     <ReplaceLib.ReplacerDef>
                         <defName>ProgKitchen_MedievalOverhaul_VECooking</defName>
                         <replacers>
-                            <li>
-                                <replace>VCE_CheesePress</replace>
-                                <with>DankPyon_Presser</with>
-                            </li>
                             <li>
                                 <replace>VCE_Salt</replace>
                                 <with>DankPyon_Salt</with>
@@ -138,30 +143,14 @@
                                 <replace>VCE_Cheese</replace>
                                 <with>DankPyon_MealCheese</with>
                             </li>
+                            <li>
+                                <replace>VCE_CheesePress</replace>
+                                <with>DankPyon_Presser</with>
+                            </li>
                         </replacers>
                     </ReplaceLib.ReplacerDef>
                     </value>
                 </li>
-                <li Class="PatchOperationAdd">
-                    <xpath>//ThingDef[defName="DankPyon_Presser"]//li[@Class="ProcessorFramework.CompProperties_Processor"]/processes</xpath>
-                    <value>
-                        <li>Ferny_NightCheeseProcess</li>
-                        <li>Ferny_BlueCheeseProcess</li>
-                        <li>Ferny_GowCheeseProcess</li>
-                        <li>Ferny_WeirdCheeseProcess</li>
-                        <li>Ferny_MechaCheeseProcess</li>
-                        <li>Ferny_BearffaloCheeseProcess</li>
-                        <li>Ferny_ThrumffaloCheeseProcess</li>
-                        <li>Ferny_LumpyCheeseProcess</li>
-                        <li>Ferny_ChickenffaloCheeseProcess</li>
-                        <li>Ferny_BrownCheeseProcess</li>
-                        <li>Ferny_HairyCheeseProcess</li>
-                        <li>Ferny_RatCheeseProcess</li>
-                        <li>Ferny_ParaceramuffaloBrieProcess</li>
-                        <li>Ferny_GreenCheeseProcess</li>
-                    </value>
-                </li>
-
 
                                         <!-- ALPHA ANIMALS CHEESE!!!!!! -->
                 <li Class="PatchOperationFindMod">
@@ -171,47 +160,31 @@
                     <match Class="PatchOperationSequence">
                         <operations>
                             <li Class="PatchOperationAdd">
-                                <xpath>/Defs</xpath>
+                                <xpath>/Defs/ThingDef[defName="AA_NightMilk"]/thingCategories</xpath>
                                 <value>
-                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
-                                    <defName>Ferny_NightCheeseProcess</defName>
-                                    <thingDef>VCE_NightCheese</thingDef>
-                                    <ingredientFilter>
-                                        <thingDefs>
-                                            <li>AA_NightMilk</li>
-                                        </thingDefs>
-                                    </ingredientFilter>
-                                </ProcessorFramework.ProcessDef>
+                                    <li>DankPyon_Milk</li>
                                 </value>
                             </li>
                             <li Class="PatchOperationAdd">
-                                <xpath>/Defs</xpath>
+                                <xpath>/Defs/ThingDef[defName="AA_BlueMilk"]/thingCategories</xpath>
                                 <value>
-                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
-                                    <defName>Ferny_BlueCheeseProcess</defName>
-                                    <thingDef>VCE_BlueCheese</thingDef>
-                                    <ingredientFilter>
-                                        <thingDefs>
-                                            <li>AA_BlueMilk</li>
-                                        </thingDefs>
-                                    </ingredientFilter>
-                                </ProcessorFramework.ProcessDef>
+                                    <li>DankPyon_Milk</li>
                                 </value>
                             </li>
                             <li Class="PatchOperationAdd">
-                                <xpath>/Defs</xpath>
+                                <xpath>/Defs/ThingDef[defName="AA_GowMilk"]/thingCategories</xpath>
                                 <value>
-                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
-                                    <defName>Ferny_GowCheeseProcess</defName>
-                                    <thingDef>VCE_GowCheese</thingDef>
-                                    <ingredientFilter>
-                                        <thingDefs>
-                                            <li>AA_GowMilk</li>
-                                        </thingDefs>
-                                    </ingredientFilter>
-                                </ProcessorFramework.ProcessDef>
+                                    <li>DankPyon_Milk</li>
                                 </value>
                             </li>
+                        <!-- <li Class="PatchOperationAdd">
+                            <xpath>//ThingDef[defName="DankPyon_Presser"]//li[@Class="ProcessorFramework.CompProperties_Processor"]/processes</xpath>
+                            <value>
+                                <li>Ferny_NightCheeseProcess</li>
+                                <li>Ferny_BlueCheeseProcess</li>
+                                <li>Ferny_GowCheeseProcess</li>
+                            </value>
+                        </li> -->
                         </operations>
                 </match>
                 </li>
@@ -227,129 +200,57 @@
                     <match Class="PatchOperationSequence">
                         <operations>
                             <li Class="PatchOperationAdd">
-                                <xpath>/Defs</xpath>
+                                <xpath>/Defs/ThingDef[defName="GR_WeirdMilk"]/thingCategories</xpath>
                                 <value>
-                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
-                                    <defName>Ferny_WeirdCheeseProcess</defName>
-                                    <thingDef>VCE_WeirdCheese</thingDef>
-                                    <ingredientFilter>
-                                        <thingDefs>
-                                            <li>GR_WeirdMilk</li>
-                                        </thingDefs>
-                                    </ingredientFilter>
-                                </ProcessorFramework.ProcessDef>
+                                    <li>DankPyon_Milk</li>
                                 </value>
                             </li>
                             <li Class="PatchOperationAdd">
-                                <xpath>/Defs</xpath>
+                                <xpath>/Defs/ThingDef[defName="GR_MechaMilk"]/thingCategories</xpath>
                                 <value>
-                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
-                                    <defName>Ferny_MechaCheeseProcess</defName>
-                                    <thingDef>VCE_MechaCheese</thingDef>
-                                    <ingredientFilter>
-                                        <thingDefs>
-                                            <li>GR_MechaMilk</li>
-                                        </thingDefs>
-                                    </ingredientFilter>
-                                </ProcessorFramework.ProcessDef>
+                                    <li>DankPyon_Milk</li>
                                 </value>
                             </li>
                             <li Class="PatchOperationAdd">
-                                <xpath>/Defs</xpath>
+                                <xpath>/Defs/ThingDef[defName="GR_BearffaloMilk"]/thingCategories</xpath>
                                 <value>
-                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
-                                    <defName>Ferny_BearffaloCheeseProcess</defName>
-                                    <thingDef>VCE_BearffaloCheese</thingDef>
-                                    <ingredientFilter>
-                                        <thingDefs>
-                                            <li>GR_BearffaloMilk</li>
-                                        </thingDefs>
-                                    </ingredientFilter>
-                                </ProcessorFramework.ProcessDef>
+                                    <li>DankPyon_Milk</li>
                                 </value>
                             </li>
                             <li Class="PatchOperationAdd">
-                                <xpath>/Defs</xpath>
+                                <xpath>/Defs/ThingDef[defName="GR_ThrumffaloMilk"]/thingCategories</xpath>
                                 <value>
-                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
-                                    <defName>Ferny_ThrumffaloCheeseProcess</defName>
-                                    <thingDef>VCE_ThrumffaloGouda</thingDef>
-                                    <ingredientFilter>
-                                        <thingDefs>
-                                            <li>GR_ThrumffaloMilk</li>
-                                        </thingDefs>
-                                    </ingredientFilter>
-                                </ProcessorFramework.ProcessDef>
+                                    <li>DankPyon_Milk</li>
                                 </value>
                             </li>
                             <li Class="PatchOperationAdd">
-                                <xpath>/Defs</xpath>
+                                <xpath>/Defs/ThingDef[defName="GR_MuffalochickenMilk"]/thingCategories</xpath>
                                 <value>
-                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
-                                    <defName>Ferny_LumpyCheeseProcess</defName>
-                                    <thingDef>VCE_LumpyCheese</thingDef>
-                                    <ingredientFilter>
-                                        <thingDefs>
-                                            <li>GR_MuffalochickenMilk</li>
-                                        </thingDefs>
-                                    </ingredientFilter>
-                                </ProcessorFramework.ProcessDef>
+                                    <li>DankPyon_Milk</li>
                                 </value>
                             </li>
                             <li Class="PatchOperationAdd">
-                                <xpath>/Defs</xpath>
+                                <xpath>/Defs/ThingDef[defName="GR_ChickenffaloMilk"]/thingCategories</xpath>
                                 <value>
-                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
-                                    <defName>Ferny_ChickenffaloCheeseProcess</defName>
-                                    <thingDef>VCE_ChickenffaloCheese</thingDef>
-                                    <ingredientFilter>
-                                        <thingDefs>
-                                            <li>GR_ChickenffaloMilk</li>
-                                        </thingDefs>
-                                    </ingredientFilter>
-                                </ProcessorFramework.ProcessDef>
+                                    <li>DankPyon_Milk</li>
                                 </value>
                             </li>
                             <li Class="PatchOperationAdd">
-                                <xpath>/Defs</xpath>
+                                <xpath>/Defs/ThingDef[defName="GR_MuffalobearMilk"]/thingCategories</xpath>
                                 <value>
-                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
-                                    <defName>Ferny_BrownCheeseProcess</defName>
-                                    <thingDef>VCE_BrownCheese</thingDef>
-                                    <ingredientFilter>
-                                        <thingDefs>
-                                            <li>GR_MuffalobearMilk</li>
-                                        </thingDefs>
-                                    </ingredientFilter>
-                                </ProcessorFramework.ProcessDef>
+                                    <li>DankPyon_Milk</li>
                                 </value>
                             </li>
                             <li Class="PatchOperationAdd">
-                                <xpath>/Defs</xpath>
+                                <xpath>/Defs/ThingDef[defName="GR_WolffaloMilk"]/thingCategories</xpath>
                                 <value>
-                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
-                                    <defName>Ferny_HairyCheeseProcess</defName>
-                                    <thingDef>VCE_HairyCheese</thingDef>
-                                    <ingredientFilter>
-                                        <thingDefs>
-                                            <li>GR_WolffaloMilk</li>
-                                        </thingDefs>
-                                    </ingredientFilter>
-                                </ProcessorFramework.ProcessDef>
+                                    <li>DankPyon_Milk</li>
                                 </value>
                             </li>
                             <li Class="PatchOperationAdd">
-                                <xpath>/Defs</xpath>
+                                <xpath>/Defs/ThingDef[defName="GR_RatMilk"]/thingCategories</xpath>
                                 <value>
-                                <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
-                                    <defName>Ferny_RatCheeseProcess</defName>
-                                    <thingDef>VCE_RatCheese</thingDef>
-                                    <ingredientFilter>
-                                        <thingDefs>
-                                            <li>GR_RatMilk</li>
-                                        </thingDefs>
-                                    </ingredientFilter>
-                                </ProcessorFramework.ProcessDef>
+                                    <li>DankPyon_Milk</li>
                                 </value>
                             </li>
                             <li Class="PatchOperationFindMod">
@@ -359,34 +260,24 @@
                                 <match Class="PatchOperationSequence">
                                     <operations>
                                         <li Class="PatchOperationAdd">
-                                            <xpath>/Defs</xpath>
+                                            <xpath>/Defs/ThingDef[defName="GR_ParaMilk"]/thingCategories</xpath>
                                             <value>
-                                            <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
-                                                <defName>Ferny_ParaceramuffaloBrieProcess</defName>
-                                                <thingDef>VCE_ParaceramuffaloBrie</thingDef>
-                                                <ingredientFilter>
-                                                    <thingDefs>
-                                                        <li>GR_ParaMilk</li>
-                                                    </thingDefs>
-                                                </ingredientFilter>
-                                            </ProcessorFramework.ProcessDef>
+                                                <li>DankPyon_Milk</li>
                                             </value>
                                         </li>
-
                                         <li Class="PatchOperationAdd">
-                                            <xpath>/Defs</xpath>
+                                            <xpath>/Defs/ThingDef[defName="GR_GreenMilk"]/thingCategories</xpath>
                                             <value>
-                                            <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
-                                                <defName>Ferny_GreenCheeseProcess</defName>
-                                                <thingDef>VCE_GreenCheese</thingDef>
-                                                <ingredientFilter>
-                                                    <thingDefs>
-                                                        <li>GR_GreenMilk</li>
-                                                    </thingDefs>
-                                                </ingredientFilter>
-                                            </ProcessorFramework.ProcessDef>
+                                                <li>DankPyon_Milk</li>
                                             </value>
                                         </li>
+                                        <!-- <li Class="PatchOperationAdd">
+                                            <xpath>//ThingDef[defName="DankPyon_Presser"]//li[@Class="ProcessorFramework.CompProperties_Processor"]/processes</xpath>
+                                            <value>
+                                                <li>Ferny_ParaceramuffaloBrieProcess</li>
+                                                <li>Ferny_GreenCheeseProcess</li>
+                                            </value>
+                                        </li> -->
                                     </operations>
                             </match>
                             </li>
