@@ -501,7 +501,82 @@
 
 
 
-
+<!-- VFE MEDIEVAL 2 -->
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Medieval 2</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+                    <li Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="DankPyon_Plant_Grape"]/plant/sowResearchPrerequisites</xpath>
+                        <value>
+                            <sowResearchPrerequisites>
+                                <li>VFEM2_Wine</li>
+                            </sowResearchPrerequisites>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>Defs/RecipeDef[defName="DankPyon_MakeMustWine"]/researchPrerequisites</xpath>
+                        <value>
+                            <researchPrerequisites>
+                                <li>VFEM2_Wine</li>
+                            </researchPrerequisites>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationReplace">
+                        <xpath>Defs/ThingDef[defName="DankPyon_Wine"]/researchPrerequisites</xpath>
+                        <value>
+                            <researchPrerequisites>
+                                <li>VFEM2_Wine</li>
+                            </researchPrerequisites>
+                        </value>
+                    </li>    
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs/ResearchProjectDef[defName="VFEM2_Wine"]</xpath>
+                        <value>
+                            <prerequisites>
+                                <li>Brewing</li>
+                            </prerequisites>
+                        </value>
+                    </li>
+                    <li Class="PatchOperationAdd">
+                        <xpath>Defs</xpath>
+                        <value>
+                            <ReplaceLib.ReplacerDef>
+                                <defName>Ferny_MedievalOverhaul_VFEM2_ProgKitchen</defName>
+                                <replacers>
+                                    <li>
+                                        <replace>VFEM2_Plant_Grape</replace>
+                                        <with>DankPyon_Plant_Grape</with>
+                                    </li>
+                                    <li>
+                                        <replace>VFEM2_Must</replace>
+                                        <with>DankPyon_MustWine</with>
+                                    </li>
+                                    <li>
+                                        <replace>VFEM2_Wine</replace>
+                                        <with>DankPyon_Wine</with>
+                                    </li>
+                                    <li>
+                                        <replace>VFEM2_RawGrapes</replace>
+                                        <with>DankPyon_RawGrapes</with>
+                                    </li>
+                                    <li>
+                                        <replace>VFEM2_MeadFermentingBarrel</replace>
+                                        <with>BarrelProcessor</with>
+                                    </li>
+                                    <li>
+                                        <replace>VFEM2_VFEM2_WineBarrel</replace>
+                                        <with>BarrelProcessor</with>
+                                    </li>
+                                </replacers>
+                            </ReplaceLib.ReplacerDef>
+                        </value>
+                    </li>   
+			</operations>
+		</match>
+	</Operation>
 
 
 
