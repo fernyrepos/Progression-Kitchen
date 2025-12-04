@@ -1,622 +1,633 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
-
-<!-- Smoker no rustic furn please! -->
-    <Operation Class="PatchOperationReplace">
-        <success>Always</success>
-        <xpath>Defs/ThingDef[defName="DankPyon_Smoker"]/researchPrerequisites</xpath>
-        <value>
-		<researchPrerequisites>
-			<li>DankPyon_Smoker</li>
-		</researchPrerequisites>
-        </value>
-    </Operation>
-
-
-	<!--Grain and bread is the basis of human civilization-->
-	<Operation Class="PatchOperationReplace">
-		<xpath>Defs/ResearchProjectDef[defName="DankPyon_Oven"]/techLevel</xpath>
-		<value>
-			<techLevel>Neolithic</techLevel>
-		</value>
-	</Operation>
-
-<!-- Rusting cooking table -->
-    <Operation Class="PatchOperationConditional">
+  <!-- Smoker no rustic furn please! -->
+  <Operation Class="PatchOperationReplace">
     <success>Always</success>
-        <xpath>/Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/researchPrerequisites</xpath>
-        <match Class="PatchOperationSequence">
-            <operations>
-                <li Class="PatchOperationReplace">
-                    <xpath>/Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/researchPrerequisites</xpath>
-                    <value>
-                        <researchPrerequisites>
-                            <li>DankPyon_BasicCooking</li>
-                        </researchPrerequisites>
-                    </value>
-                </li>
-            </operations>
-        </match>
-        <nomatch Class="PatchOperationSequence">
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="DankPyon_RusticCookingTable"]</xpath>
-                    <value>
-                        <researchPrerequisites>
-                            <li>DankPyon_BasicCooking</li>
-                        </researchPrerequisites>
-                    </value>
-                </li>
-            </operations>
-        </nomatch>
-    </Operation>
-
-
-    <Operation Class="PatchOperationReplace">
-        <success>Always</success>
-        <xpath>Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/label</xpath>
-        <value>
-            <label>basic cooking table</label>
-        </value>
-    </Operation>
-
-<!-- Rusting oven -->
-    <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="DankPyon_Smoker"]/researchPrerequisites</xpath>
+    <value>
+      <researchPrerequisites>
+        <li>DankPyon_Smoker</li>
+      </researchPrerequisites>
+    </value>
+  </Operation>
+  <!--Grain and bread is the basis of human civilization-->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ResearchProjectDef[defName="DankPyon_Oven"]/techLevel</xpath>
+    <value>
+      <techLevel>Neolithic</techLevel>
+    </value>
+  </Operation>
+  <!-- Rusting cooking table -->
+  <Operation Class="PatchOperationConditional">
     <success>Always</success>
-        <xpath>/Defs/ThingDef[defName="DankPyon_StoneOven"]/researchPrerequisites</xpath>
-        <match Class="PatchOperationSequence">
-            <operations>
-                <li Class="PatchOperationReplace">
-                    <xpath>/Defs/ThingDef[defName="DankPyon_StoneOven"]/researchPrerequisites</xpath>
-                    <value>
-                        <researchPrerequisites>
-                            <li>DankPyon_IntermediateCooking</li>
-                        </researchPrerequisites>
-                    </value>
-                </li>
-            </operations>
-        </match>
-        <nomatch Class="PatchOperationSequence">
-            <operations>
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs/ThingDef[defName="DankPyon_StoneOven"]</xpath>
-                    <value>
-                        <researchPrerequisites>
-                            <li>DankPyon_IntermediateCooking</li>
-                        </researchPrerequisites>
-                    </value>
-                </li>
-            </operations>
-        </nomatch>
-    </Operation>
-    <Operation Class="PatchOperationReplace">
-        <success>Always</success>
-        <xpath>Defs/ThingDef[defName="DankPyon_StoneOven"]/label</xpath>
-        <value>
-            <label>oven</label>
-        </value>
-    </Operation>
-
-                        <!-- VE COOKING OVERLAP -->
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>Vanilla Cooking Expanded</li>
-		</mods>
-            <match Class="PatchOperationSequence">
-                <operations>
-
-
-                <li Class="PatchOperationRemove">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="VCE_MakeSalt"]</xpath>
-                </li>
-                <li Class="PatchOperationRemove">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="VCE_MakeSaltfromBlocks"]</xpath>
-                </li>
-                <li Class="PatchOperationRemove">
-                    <success>Always</success>
-                    <xpath>Defs/ResearchProjectDef[defName="VCE_CheeseMaking"]</xpath>
-                </li>
-                <li Class="PatchOperationRemove">
-                    <success>Always</success>
-                    <xpath>Defs/ThingDef[defName="VCE_CheesePress"]/researchPrerequisites</xpath>
-                </li>
-                <!-- <li Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/researchPrerequisites</xpath>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/researchPrerequisites</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>DankPyon_BasicCooking</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+      </operations>
+    </match>
+    <nomatch Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="DankPyon_RusticCookingTable"]</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>DankPyon_BasicCooking</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+      </operations>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="DankPyon_RusticCookingTable"]/label</xpath>
+    <value>
+      <label>basic cooking table</label>
+    </value>
+  </Operation>
+  <!-- Rusting oven -->
+  <Operation Class="PatchOperationConditional">
+    <success>Always</success>
+    <xpath>/Defs/ThingDef[defName="DankPyon_StoneOven"]/researchPrerequisites</xpath>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="DankPyon_StoneOven"]/researchPrerequisites</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>DankPyon_IntermediateCooking</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+      </operations>
+    </match>
+    <nomatch Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName="DankPyon_StoneOven"]</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>DankPyon_IntermediateCooking</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+      </operations>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="DankPyon_StoneOven"]/label</xpath>
+    <value>
+      <label>oven</label>
+    </value>
+  </Operation>
+  <!-- VE COOKING OVERLAP -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Cooking Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationRemove">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="VCE_MakeSalt"]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="VCE_MakeSaltfromBlocks"]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <success>Always</success>
+          <xpath>Defs/ResearchProjectDef[defName="VCE_CheeseMaking"]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="VCE_CheesePress"]/researchPrerequisites</xpath>
+        </li>
+        <!-- <li Class="PatchOperationReplace">
                     <success>Always</success>
                     <xpath>Defs/ThingDef[defName="VCE_CheesePress"]/label</xpath>
                                 <value>
                                     <label>This is not supposed to be here</label>
                                 </value>
                 </li> -->
-                <li Class="PatchOperationAdd">
-                    <xpath>/Defs</xpath>
-                    <value>
-                    <ReplaceLib.ReplacerDef>
-                        <defName>ProgKitchen_MedievalOverhaul_VECooking</defName>
-                        <replacers>
-                            <li>
-                                <replace>VCE_Salt</replace>
-                                <with>DankPyon_Salt</with>
-                            </li>
-                            <li>
-                                <replace>VCE_Cheese</replace>
-                                <with>DankPyon_MealCheese</with>
-                            </li>
-                            <li>
-                                <replace>VCE_CheesePress</replace>
-                                <with>DankPyon_Presser</with>
-                            </li>
-                        </replacers>
-                    </ReplaceLib.ReplacerDef>
-                    </value>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs</xpath>
+          <value>
+            <ReplaceLib.ReplacerDef>
+              <defName>ProgKitchen_MedievalOverhaul_VECooking</defName>
+              <replacers>
+                <li>
+                  <replace>VCE_Salt</replace>
+                  <with>DankPyon_Salt</with>
                 </li>
-
-                                        <!-- ALPHA ANIMALS CHEESE!!!!!! -->
-                <li Class="PatchOperationFindMod">
-                    <mods>
-                        <li>Alpha Animals</li>
-                    </mods>
-                    <match Class="PatchOperationSequence">
-                        <operations>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/ThingDef[defName="AA_NightMilk"]/thingCategories</xpath>
-                                <value>
-                                    <li>DankPyon_Milk</li>
-                                </value>
-                            </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/ThingDef[defName="AA_BlueMilk"]/thingCategories</xpath>
-                                <value>
-                                    <li>DankPyon_Milk</li>
-                                </value>
-                            </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/ThingDef[defName="AA_GowMilk"]/thingCategories</xpath>
-                                <value>
-                                    <li>DankPyon_Milk</li>
-                                </value>
-                            </li>
-                        <!-- <li Class="PatchOperationAdd">
-                            <xpath>//ThingDef[defName="DankPyon_Presser"]//li[@Class="ProcessorFramework.CompProperties_Processor"]/processes</xpath>
-                            <value>
-                                <li>Ferny_NightCheeseProcess</li>
-                                <li>Ferny_BlueCheeseProcess</li>
-                                <li>Ferny_GowCheeseProcess</li>
-                            </value>
-                        </li> -->
-                        </operations>
-                </match>
+                <li>
+                  <replace>VCE_Cheese</replace>
+                  <with>DankPyon_MealCheese</with>
                 </li>
-
-
-
-
-                                        <!-- VE GENETICS CHEESE!!!!!! -->
-                <li Class="PatchOperationFindMod">
-                    <mods>
-                        <li>Vanilla Genetics Expanded</li>
-                    </mods>
-                    <match Class="PatchOperationSequence">
-                        <operations>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/ThingDef[defName="GR_WeirdMilk"]/thingCategories</xpath>
-                                <value>
-                                    <li>DankPyon_Milk</li>
-                                </value>
-                            </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/ThingDef[defName="GR_MechaMilk"]/thingCategories</xpath>
-                                <value>
-                                    <li>DankPyon_Milk</li>
-                                </value>
-                            </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/ThingDef[defName="GR_BearffaloMilk"]/thingCategories</xpath>
-                                <value>
-                                    <li>DankPyon_Milk</li>
-                                </value>
-                            </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/ThingDef[defName="GR_ThrumffaloMilk"]/thingCategories</xpath>
-                                <value>
-                                    <li>DankPyon_Milk</li>
-                                </value>
-                            </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/ThingDef[defName="GR_MuffalochickenMilk"]/thingCategories</xpath>
-                                <value>
-                                    <li>DankPyon_Milk</li>
-                                </value>
-                            </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/ThingDef[defName="GR_ChickenffaloMilk"]/thingCategories</xpath>
-                                <value>
-                                    <li>DankPyon_Milk</li>
-                                </value>
-                            </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/ThingDef[defName="GR_MuffalobearMilk"]/thingCategories</xpath>
-                                <value>
-                                    <li>DankPyon_Milk</li>
-                                </value>
-                            </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/ThingDef[defName="GR_WolffaloMilk"]/thingCategories</xpath>
-                                <value>
-                                    <li>DankPyon_Milk</li>
-                                </value>
-                            </li>
-                            <li Class="PatchOperationAdd">
-                                <xpath>/Defs/ThingDef[defName="GR_RatMilk"]/thingCategories</xpath>
-                                <value>
-                                    <li>DankPyon_Milk</li>
-                                </value>
-                            </li>
-                            <li Class="PatchOperationFindMod">
-                                <mods>
-                                    <li>Megafauna</li>
-                                </mods>
-                                <match Class="PatchOperationSequence">
-                                    <operations>
-                                        <li Class="PatchOperationAdd">
-                                            <xpath>/Defs/ThingDef[defName="GR_ParaMilk"]/thingCategories</xpath>
-                                            <value>
-                                                <li>DankPyon_Milk</li>
-                                            </value>
-                                        </li>
-                                        <li Class="PatchOperationAdd">
-                                            <xpath>/Defs/ThingDef[defName="GR_GreenMilk"]/thingCategories</xpath>
-                                            <value>
-                                                <li>DankPyon_Milk</li>
-                                            </value>
-                                        </li>
-                                        <!-- <li Class="PatchOperationAdd">
-                                            <xpath>//ThingDef[defName="DankPyon_Presser"]//li[@Class="ProcessorFramework.CompProperties_Processor"]/processes</xpath>
-                                            <value>
-                                                <li>Ferny_ParaceramuffaloBrieProcess</li>
-                                                <li>Ferny_GreenCheeseProcess</li>
-                                            </value>
-                                        </li> -->
-                                    </operations>
-                            </match>
-                            </li>
-                        </operations>
-                </match>
+                <li>
+                  <replace>VCE_CheesePress</replace>
+                  <with>DankPyon_Presser</with>
                 </li>
-
-
-                                        <!-- SEARING STUFF -->
-
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/ResearchProjectDef[defName="DankPyon_Grill"]/label</xpath>
-                    <value>
-                        <label>searing</label>
-                    </value>
+              </replacers>
+            </ReplaceLib.ReplacerDef>
+          </value>
+        </li>
+        <!-- SEARING STUFF -->
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/ResearchProjectDef[defName="DankPyon_Grill"]/label</xpath>
+          <value>
+            <label>searing</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/ResearchProjectDef[defName="DankPyon_Grill"]/description</xpath>
+          <value>
+            <description>Learn how to sear meat over an open flame, creating delicious seared sausages and meats.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="DankPyon_Grill"]/label</xpath>
+          <value>
+            <label>searing brazier</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/RecipeDef[contains(defName, "VCE_CookGrillFine")]/researchPrerequisites</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>VCE_Grilling</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/RecipeDef[starts-with(defName, "VCE_CookGrillLavish")]/researchPrerequisites</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>VCE_Grilling</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/RecipeDef[defName="VCE_CookGrillGourmet"]/researchPrerequisites</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>VCE_Grilling</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="DankPyon_MealGrilledSausages"]/label</xpath>
+          <value>
+            <label>seared sausages</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_MealGrilledSausages"]/label</xpath>
+          <value>
+            <label>seared sausages</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_MealGrilledCheese"]/label</xpath>
+          <value>
+            <label>seared cheese</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_MealGrilledSkewers"]/label</xpath>
+          <value>
+            <label>seared skewers</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausages"]/label</xpath>
+          <value>
+            <label>sear sausages</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausages"]/description</xpath>
+          <value>
+            <description>Sear a straightforward meal from sausages.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausages"]/jobString</xpath>
+          <value>
+            <jobString>Searing sausages.</jobString>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausagesBulk"]/label</xpath>
+          <value>
+            <label>sear sausages x5</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausagesBulk"]/description</xpath>
+          <value>
+            <description>Sear a straightforward meal from sausages in bulk.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausagesBulk"]/jobString</xpath>
+          <value>
+            <jobString>Searing 5 sausages.</jobString>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="DankPyon_MealGrilledCheese"]/label</xpath>
+          <value>
+            <label>seared cheese</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheese"]/label</xpath>
+          <value>
+            <label>sear cheese</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheese"]/description</xpath>
+          <value>
+            <description>Sear cheese into a delicious meal.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheese"]/jobString</xpath>
+          <value>
+            <jobString>Searing cheese.</jobString>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheeseBulk"]/label</xpath>
+          <value>
+            <label>sear cheese x5</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheeseBulk"]/description</xpath>
+          <value>
+            <jobString>Sear cheese in bulk into delicious meals.</jobString>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheeseBulk"]/jobString</xpath>
+          <value>
+            <jobString>Searing cheese.</jobString>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="DankPyon_MealGrilledCheese"]/label</xpath>
+          <value>
+            <label>seared cheese</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/ThingDef[defName="DankPyon_MealGrilledSkewers"]/label</xpath>
+          <value>
+            <label>seared skewers</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSkewers"]/label</xpath>
+          <value>
+            <label>sear skewers</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausages"]/description</xpath>
+          <value>
+            <description>Sear a delicious meal from meat.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausages"]/jobString</xpath>
+          <value>
+            <jobString>Searing skewers.</jobString>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSkewersBulk"]/label</xpath>
+          <value>
+            <label>sear skewers x5</label>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSkewersBulk"]/description</xpath>
+          <value>
+            <description>Sear delicious meals from meat in bulk.</description>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <success>Always</success>
+          <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSkewersBulk"]/jobString</xpath>
+          <value>
+            <jobString>Searing 5 skewers.</jobString>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <!-- VFE MEDIEVAL 2 -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Factions Expanded - Medieval 2</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="DankPyon_Plant_Grape"]/plant/sowResearchPrerequisites</xpath>
+          <value>
+            <sowResearchPrerequisites>
+              <li>VFEM2_Wine</li>
+            </sowResearchPrerequisites>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/RecipeDef[defName="DankPyon_MakeMustWine"]/researchPrerequisites</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>VFEM2_Wine</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="DankPyon_Wine"]/researchPrerequisites</xpath>
+          <value>
+            <researchPrerequisites>
+              <li>VFEM2_Wine</li>
+            </researchPrerequisites>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ResearchProjectDef[defName="VFEM2_Wine"]</xpath>
+          <value>
+            <prerequisites>
+              <li>Brewing</li>
+            </prerequisites>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs</xpath>
+          <value>
+            <ReplaceLib.ReplacerDef>
+              <defName>Ferny_MedievalOverhaul_VFEM2_ProgKitchen</defName>
+              <replacers>
+                <li>
+                  <replace>VFEM2_Plant_Grape</replace>
+                  <with>DankPyon_Plant_Grape</with>
                 </li>
-
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/ResearchProjectDef[defName="DankPyon_Grill"]/description</xpath>
-                    <value>
-                        <description>Learn how to sear meat over an open flame, creating delicious seared sausages and meats.</description>
-                    </value>
+                <li>
+                  <replace>VFEM2_Must</replace>
+                  <with>DankPyon_MustWine</with>
                 </li>
-
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/ThingDef[defName="DankPyon_Grill"]/label</xpath>
-                    <value>
-                        <label>searing brazier</label>
-                    </value>
+                <li>
+                  <replace>VFEM2_Wine</replace>
+                  <with>DankPyon_Wine</with>
                 </li>
-
-                <li Class="PatchOperationReplace">
-                    <xpath>/Defs/RecipeDef[contains(defName, "VCE_CookGrillFine")]/researchPrerequisites</xpath>
-                    <value>
-                        <researchPrerequisites>
-                            <li>VCE_Grilling</li>
-                        </researchPrerequisites>
-                    </value>
+                <li>
+                  <replace>VFEM2_RawGrapes</replace>
+                  <with>DankPyon_RawGrapes</with>
                 </li>
-
-                <li Class="PatchOperationReplace">
-                    <xpath>/Defs/RecipeDef[starts-with(defName, "VCE_CookGrillLavish")]/researchPrerequisites</xpath>
-                    <value>
-                        <researchPrerequisites>
-                            <li>VCE_Grilling</li>
-                        </researchPrerequisites>
-                    </value>
+                <li>
+                  <replace>VFEM2_MeadFermentingBarrel</replace>
+                  <with>BarrelProcessor</with>
                 </li>
-
-                <li Class="PatchOperationReplace">
-                    <xpath>/Defs/RecipeDef[defName="VCE_CookGrillGourmet"]/researchPrerequisites</xpath>
-                    <value>
-                        <researchPrerequisites>
-                            <li>VCE_Grilling</li>
-                        </researchPrerequisites>
-                    </value>
+                <li>
+                  <replace>VFEM2_VFEM2_WineBarrel</replace>
+                  <with>BarrelProcessor</with>
                 </li>
-
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/ThingDef[defName="DankPyon_MealGrilledSausages"]/label</xpath>
-                    <value>
-                        <label>seared sausages</label>
-                    </value>
+                <li>
+                  <replace>VFEM2_Mead</replace>
+                  <with>DankPyon_Mead</with>
                 </li>
-
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_MealGrilledSausages"]/label</xpath>
-                    <value>
-                        <label>seared sausages</label>
-                    </value>
-                </li>
-
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_MealGrilledCheese"]/label</xpath>
-                    <value>
-                        <label>seared cheese</label>
-                    </value>
-                </li>
-
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_MealGrilledSkewers"]/label</xpath>
-                    <value>
-                        <label>seared skewers</label>
-                    </value>
-                </li>
-
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausages"]/label</xpath>
-                    <value>
-                        <label>sear sausages</label>
-                    </value>
-                </li> 
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausages"]/description</xpath>
-                    <value>
-                        <description>Sear a straightforward meal from sausages.</description>
-                    </value>
-                </li>
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausages"]/jobString</xpath>
-                    <value>
-                        <jobString>Searing sausages.</jobString>
-                    </value>
-                </li>
-
-
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausagesBulk"]/label</xpath>
-                    <value>
-                        <label>sear sausages x5</label>
-                    </value>
-                </li>
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausagesBulk"]/description</xpath>
-                    <value>
-                        <description>Sear a straightforward meal from sausages in bulk.</description>
-                    </value>
-                </li>
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausagesBulk"]/jobString</xpath>
-                    <value>
-                        <jobString>Searing 5 sausages.</jobString>
-                    </value>
-                </li>
-
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/ThingDef[defName="DankPyon_MealGrilledCheese"]/label</xpath>
-                    <value>
-                        <label>seared cheese</label>
-                    </value>
-                </li>
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheese"]/label</xpath>
-                    <value>
-                        <label>sear cheese</label>
-                    </value>
-                </li>
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheese"]/description</xpath>
-                    <value>
-                        <description>Sear cheese into a delicious meal.</description>
-                    </value>
-                </li>
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheese"]/jobString</xpath>
-                    <value>
-                        <jobString>Searing cheese.</jobString>
-                    </value>
-                </li>
-
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheeseBulk"]/label</xpath>
-                    <value>
-                        <label>sear cheese x5</label>
-                    </value>
-                </li>
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheeseBulk"]/description</xpath>
-                    <value>
-                        <jobString>Sear cheese in bulk into delicious meals.</jobString>
-                    </value>
-                </li>
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledCheeseBulk"]/jobString</xpath>
-                    <value>
-                        <jobString>Searing cheese.</jobString>
-                    </value>
-                </li>
-
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/ThingDef[defName="DankPyon_MealGrilledCheese"]/label</xpath>
-                    <value>
-                        <label>seared cheese</label>
-                    </value>
-                </li>
-
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/ThingDef[defName="DankPyon_MealGrilledSkewers"]/label</xpath>
-                    <value>
-                        <label>seared skewers</label>
-                    </value>
-                </li>
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSkewers"]/label</xpath>
-                    <value>
-                        <label>sear skewers</label>
-                    </value>
-                </li>
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausages"]/description</xpath>
-                    <value>
-                        <description>Sear a delicious meal from meat.</description>
-                    </value>
-                </li>
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSausages"]/jobString</xpath>
-                    <value>
-                        <jobString>Searing skewers.</jobString>
-                    </value>
-                </li>
-
-
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSkewersBulk"]/label</xpath>
-                    <value>
-                        <label>sear skewers x5</label>
-                    </value>
-                </li>
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSkewersBulk"]/description</xpath>
-                    <value>
-                        <description>Sear delicious meals from meat in bulk.</description>
-                    </value>
-                </li>
-                <li Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealGrilledSkewersBulk"]/jobString</xpath>
-                    <value>
-                        <jobString>Searing 5 skewers.</jobString>
-                    </value>
-                </li>
-
-
-
-                </operations>
-		</match>
-	</Operation>
-
-
-
-
-
-
-<!-- VFE MEDIEVAL 2 -->
-	<Operation Class="PatchOperationFindMod">
-		<mods>
-			<li>Vanilla Factions Expanded - Medieval 2</li>
-		</mods>
-		<match Class="PatchOperationSequence">
-			<operations>
-                    <li Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="DankPyon_Plant_Grape"]/plant/sowResearchPrerequisites</xpath>
-                        <value>
-                            <sowResearchPrerequisites>
-                                <li>VFEM2_Wine</li>
-                            </sowResearchPrerequisites>
-                        </value>
-                    </li>
-                    <li Class="PatchOperationReplace">
-                        <xpath>Defs/RecipeDef[defName="DankPyon_MakeMustWine"]/researchPrerequisites</xpath>
-                        <value>
-                            <researchPrerequisites>
-                                <li>VFEM2_Wine</li>
-                            </researchPrerequisites>
-                        </value>
-                    </li>
-                    <li Class="PatchOperationReplace">
-                        <xpath>Defs/ThingDef[defName="DankPyon_Wine"]/researchPrerequisites</xpath>
-                        <value>
-                            <researchPrerequisites>
-                                <li>VFEM2_Wine</li>
-                            </researchPrerequisites>
-                        </value>
-                    </li>    
-                    <li Class="PatchOperationAdd">
-                        <xpath>Defs/ResearchProjectDef[defName="VFEM2_Wine"]</xpath>
-                        <value>
-                            <prerequisites>
-                                <li>Brewing</li>
-                            </prerequisites>
-                        </value>
-                    </li>
-                    <li Class="PatchOperationAdd">
-                        <xpath>Defs</xpath>
-                        <value>
-                            <ReplaceLib.ReplacerDef>
-                                <defName>Ferny_MedievalOverhaul_VFEM2_ProgKitchen</defName>
-                                <replacers>
-                                    <li>
-                                        <replace>VFEM2_Plant_Grape</replace>
-                                        <with>DankPyon_Plant_Grape</with>
-                                    </li>
-                                    <li>
-                                        <replace>VFEM2_Must</replace>
-                                        <with>DankPyon_MustWine</with>
-                                    </li>
-                                    <li>
-                                        <replace>VFEM2_Wine</replace>
-                                        <with>DankPyon_Wine</with>
-                                    </li>
-                                    <li>
-                                        <replace>VFEM2_RawGrapes</replace>
-                                        <with>DankPyon_RawGrapes</with>
-                                    </li>
-                                    <li>
-                                        <replace>VFEM2_MeadFermentingBarrel</replace>
-                                        <with>BarrelProcessor</with>
-                                    </li>
-                                    <li>
-                                        <replace>VFEM2_VFEM2_WineBarrel</replace>
-                                        <with>BarrelProcessor</with>
-                                    </li>
-                                </replacers>
-                            </ReplaceLib.ReplacerDef>
-                        </value>
-                    </li>   
-			</operations>
-		</match>
-	</Operation>
-
-
-
-
-
+              </replacers>
+            </ReplaceLib.ReplacerDef>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <!-- Vanilla Brewing Expanded -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Brewing Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="DankPyon_Mead"]</xpath>
+          <value>
+            <thingCategories>
+              <li>VBE_DrinksSimpleSpirits</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName="DankPyon_Wine"]</xpath>
+          <value>
+            <thingCategories>
+              <li>VBE_DrinksSimpleSpirits</li>
+            </thingCategories>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <!-- ALPHA ANIMALS MILK CATEGORIES -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Alpha Animals</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AA_NightMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AA_BlueMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AA_GowMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <!-- VE GENETICS MILK CATEGORIES -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Genetics Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_WeirdMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_MechaMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_BearffaloMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_ThrumffaloMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_MuffalochickenMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_ChickenffaloMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_MuffalobearMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_WolffaloMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_RatMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationFindMod">
+          <mods>
+            <li>Megafauna</li>
+          </mods>
+          <match Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="GR_ParaMilk"]/thingCategories</xpath>
+                <value>
+                  <thingCategories>
+                    <li>DankPyon_Milk</li>
+                  </thingCategories>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="GR_GreenMilk"]/thingCategories</xpath>
+                <value>
+                  <thingCategories>
+                    <li>DankPyon_Milk</li>
+                  </thingCategories>
+                </value>
+              </li>
+            </operations>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <!-- Megafauna -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Megafauna</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="SivatheriumMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
 </Patch>
