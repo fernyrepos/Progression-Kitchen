@@ -141,134 +141,6 @@
             </ReplaceLib.ReplacerDef>
           </value>
         </li>
-        <!-- ALPHA ANIMALS CHEESE!!!!!! -->
-        <li Class="PatchOperationFindMod">
-          <mods>
-            <li>Alpha Animals</li>
-          </mods>
-          <match Class="PatchOperationSequence">
-            <operations>
-              <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="AA_NightMilk"]/thingCategories</xpath>
-                <value>
-                  <li>DankPyon_Milk</li>
-                </value>
-              </li>
-              <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="AA_BlueMilk"]/thingCategories</xpath>
-                <value>
-                  <li>DankPyon_Milk</li>
-                </value>
-              </li>
-              <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="AA_GowMilk"]/thingCategories</xpath>
-                <value>
-                  <li>DankPyon_Milk</li>
-                </value>
-              </li>
-              <!-- <li Class="PatchOperationAdd">
-                            <xpath>//ThingDef[defName="DankPyon_Presser"]//li[@Class="ProcessorFramework.CompProperties_Processor"]/processes</xpath>
-                            <value>
-                                <li>Ferny_NightCheeseProcess</li>
-                                <li>Ferny_BlueCheeseProcess</li>
-                                <li>Ferny_GowCheeseProcess</li>
-                            </value>
-                        </li> -->
-            </operations>
-          </match>
-        </li>
-        <!-- VE GENETICS CHEESE!!!!!! -->
-        <li Class="PatchOperationFindMod">
-          <mods>
-            <li>Vanilla Genetics Expanded</li>
-          </mods>
-          <match Class="PatchOperationSequence">
-            <operations>
-              <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="GR_WeirdMilk"]/thingCategories</xpath>
-                <value>
-                  <li>DankPyon_Milk</li>
-                </value>
-              </li>
-              <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="GR_MechaMilk"]/thingCategories</xpath>
-                <value>
-                  <li>DankPyon_Milk</li>
-                </value>
-              </li>
-              <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="GR_BearffaloMilk"]/thingCategories</xpath>
-                <value>
-                  <li>DankPyon_Milk</li>
-                </value>
-              </li>
-              <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="GR_ThrumffaloMilk"]/thingCategories</xpath>
-                <value>
-                  <li>DankPyon_Milk</li>
-                </value>
-              </li>
-              <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="GR_MuffalochickenMilk"]/thingCategories</xpath>
-                <value>
-                  <li>DankPyon_Milk</li>
-                </value>
-              </li>
-              <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="GR_ChickenffaloMilk"]/thingCategories</xpath>
-                <value>
-                  <li>DankPyon_Milk</li>
-                </value>
-              </li>
-              <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="GR_MuffalobearMilk"]/thingCategories</xpath>
-                <value>
-                  <li>DankPyon_Milk</li>
-                </value>
-              </li>
-              <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="GR_WolffaloMilk"]/thingCategories</xpath>
-                <value>
-                  <li>DankPyon_Milk</li>
-                </value>
-              </li>
-              <li Class="PatchOperationAdd">
-                <xpath>/Defs/ThingDef[defName="GR_RatMilk"]/thingCategories</xpath>
-                <value>
-                  <li>DankPyon_Milk</li>
-                </value>
-              </li>
-              <li Class="PatchOperationFindMod">
-                <mods>
-                  <li>Megafauna</li>
-                </mods>
-                <match Class="PatchOperationSequence">
-                  <operations>
-                    <li Class="PatchOperationAdd">
-                      <xpath>/Defs/ThingDef[defName="GR_ParaMilk"]/thingCategories</xpath>
-                      <value>
-                        <li>DankPyon_Milk</li>
-                      </value>
-                    </li>
-                    <li Class="PatchOperationAdd">
-                      <xpath>/Defs/ThingDef[defName="GR_GreenMilk"]/thingCategories</xpath>
-                      <value>
-                        <li>DankPyon_Milk</li>
-                      </value>
-                    </li>
-                    <!-- <li Class="PatchOperationAdd">
-                                            <xpath>//ThingDef[defName="DankPyon_Presser"]//li[@Class="ProcessorFramework.CompProperties_Processor"]/processes</xpath>
-                                            <value>
-                                                <li>Ferny_ParaceramuffaloBrieProcess</li>
-                                                <li>Ferny_GreenCheeseProcess</li>
-                                            </value>
-                                        </li> -->
-                  </operations>
-                </match>
-              </li>
-            </operations>
-          </match>
-        </li>
         <!-- SEARING STUFF -->
         <li Class="PatchOperationReplace">
           <success>Always</success>
@@ -593,6 +465,165 @@
           <value>
             <thingCategories>
               <li>VBE_DrinksSimpleSpirits</li>
+            </thingCategories>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <!-- ALPHA ANIMALS MILK CATEGORIES -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Alpha Animals</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AA_NightMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AA_BlueMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="AA_GowMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <!-- VE GENETICS MILK CATEGORIES -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Genetics Expanded</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_WeirdMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_MechaMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_BearffaloMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_ThrumffaloMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_MuffalochickenMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_ChickenffaloMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_MuffalobearMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_WolffaloMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="GR_RatMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationFindMod">
+          <mods>
+            <li>Megafauna</li>
+          </mods>
+          <match Class="PatchOperationSequence">
+            <operations>
+              <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="GR_ParaMilk"]/thingCategories</xpath>
+                <value>
+                  <thingCategories>
+                    <li>DankPyon_Milk</li>
+                  </thingCategories>
+                </value>
+              </li>
+              <li Class="PatchOperationReplace">
+                <xpath>/Defs/ThingDef[defName="GR_GreenMilk"]/thingCategories</xpath>
+                <value>
+                  <thingCategories>
+                    <li>DankPyon_Milk</li>
+                  </thingCategories>
+                </value>
+              </li>
+            </operations>
+          </match>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <!-- Megafauna -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Megafauna</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="SivatheriumMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
             </thingCategories>
           </value>
         </li>
