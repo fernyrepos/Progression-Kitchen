@@ -6,7 +6,7 @@
 		<description>Learn the art of sushi, made from rice and fish.</description>
 		<baseCost>700</baseCost>
 		<tab>Main</tab>
-		<techLevel>Industrial</techLevel>
+		<techLevel>Medieval</techLevel>
 		<researchViewX>15.00</researchViewX>
 		<researchViewY>6.00</researchViewY>
 	</ResearchProjectDef>
