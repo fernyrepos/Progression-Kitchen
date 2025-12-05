@@ -630,4 +630,22 @@
       </operations>
     </match>
   </Operation>
+  <!-- Dark Ages : Beasts and Monsters -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Dark Ages : Beasts and Monsters</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="DA_RegalMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
 </Patch>
