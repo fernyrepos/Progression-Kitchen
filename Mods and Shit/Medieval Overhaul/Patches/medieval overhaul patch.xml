@@ -137,6 +137,18 @@
                   <replace>VCE_CheesePress</replace>
                   <with>DankPyon_Presser</with>
                 </li>
+                <li>
+                  <replace>VCE_Flour</replace>
+                  <with>DankPyon_Flour</with>
+                </li>
+                <li>
+                  <replace>VCE_RawSpices</replace>
+                  <with>DankPyon_Spices</with>
+                </li>
+                <li>
+                  <replace>VCE_RawSugar</replace>
+                  <with>DankPyon_Sugar</with>
+                </li>
               </replacers>
             </ReplaceLib.ReplacerDef>
           </value>
@@ -362,6 +374,31 @@
             <jobString>Searing 5 skewers.</jobString>
           </value>
         </li>
+        <!-- Move condiments to MO's condiments to VC condiments category -->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="DankPyon_Salt"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>VCE_Condiments</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="DankPyon_Spices"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>VCE_Condiments</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="DankPyon_Sugar"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>VCE_Condiments</li>
+            </thingCategories>
+          </value>
+        </li>
       </operations>
     </match>
   </Operation>
@@ -442,6 +479,12 @@
             </ReplaceLib.ReplacerDef>
           </value>
         </li>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="BarrelProcessor"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="VFEM2_Mead"]</xpath>
+        </li>
+        <li Class="PatchOperationRemove">
+          <xpath>Defs/ThingDef[defName="BarrelProcessor"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="VFEM2_Wine"]</xpath>
+        </li>
       </operations>
     </match>
   </Operation>
@@ -453,15 +496,7 @@
     <match Class="PatchOperationSequence">
       <operations>
         <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="DankPyon_Mead"]</xpath>
-          <value>
-            <thingCategories>
-              <li>VBE_DrinksSimpleSpirits</li>
-            </thingCategories>
-          </value>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="DankPyon_Wine"]</xpath>
+          <xpath>Defs/ThingDef[defName="DankPyon_Mead" or defName="DankPyon_Wine"]</xpath>
           <value>
             <thingCategories>
               <li>VBE_DrinksSimpleSpirits</li>
@@ -479,23 +514,10 @@
     <match Class="PatchOperationSequence">
       <operations>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="AA_NightMilk"]/thingCategories</xpath>
-          <value>
-            <thingCategories>
-              <li>DankPyon_Milk</li>
-            </thingCategories>
-          </value>
-        </li>
-        <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="AA_BlueMilk"]/thingCategories</xpath>
-          <value>
-            <thingCategories>
-              <li>DankPyon_Milk</li>
-            </thingCategories>
-          </value>
-        </li>
-        <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="AA_GowMilk"]/thingCategories</xpath>
+          <xpath>/Defs/ThingDef[defName="AA_NightMilk" or 
+            defName="AA_BlueMilk" or
+            defName="AA_GowMilk"
+            ]/thingCategories</xpath>
           <value>
             <thingCategories>
               <li>DankPyon_Milk</li>
@@ -513,71 +535,16 @@
     <match Class="PatchOperationSequence">
       <operations>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="GR_WeirdMilk"]/thingCategories</xpath>
-          <value>
-            <thingCategories>
-              <li>DankPyon_Milk</li>
-            </thingCategories>
-          </value>
-        </li>
-        <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="GR_MechaMilk"]/thingCategories</xpath>
-          <value>
-            <thingCategories>
-              <li>DankPyon_Milk</li>
-            </thingCategories>
-          </value>
-        </li>
-        <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="GR_BearffaloMilk"]/thingCategories</xpath>
-          <value>
-            <thingCategories>
-              <li>DankPyon_Milk</li>
-            </thingCategories>
-          </value>
-        </li>
-        <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="GR_ThrumffaloMilk"]/thingCategories</xpath>
-          <value>
-            <thingCategories>
-              <li>DankPyon_Milk</li>
-            </thingCategories>
-          </value>
-        </li>
-        <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="GR_MuffalochickenMilk"]/thingCategories</xpath>
-          <value>
-            <thingCategories>
-              <li>DankPyon_Milk</li>
-            </thingCategories>
-          </value>
-        </li>
-        <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="GR_ChickenffaloMilk"]/thingCategories</xpath>
-          <value>
-            <thingCategories>
-              <li>DankPyon_Milk</li>
-            </thingCategories>
-          </value>
-        </li>
-        <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="GR_MuffalobearMilk"]/thingCategories</xpath>
-          <value>
-            <thingCategories>
-              <li>DankPyon_Milk</li>
-            </thingCategories>
-          </value>
-        </li>
-        <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="GR_WolffaloMilk"]/thingCategories</xpath>
-          <value>
-            <thingCategories>
-              <li>DankPyon_Milk</li>
-            </thingCategories>
-          </value>
-        </li>
-        <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="GR_RatMilk"]/thingCategories</xpath>
+          <xpath>/Defs/ThingDef[defName="GR_WeirdMilk" or
+            defName="GR_MechaMilk" or
+            defName="GR_BearffaloMilk" or
+            defName="GR_ThrumffaloMilk" or
+            defName="GR_MuffalochickenMilk" or
+            defName="GR_ChickenffaloMilk" or
+            defName="GR_MuffalobearMilk" or
+            defName="GR_WolffaloMilk" or
+            defName="GR_RatMilk"
+            ]/thingCategories</xpath>
           <value>
             <thingCategories>
               <li>DankPyon_Milk</li>
@@ -591,15 +558,9 @@
           <match Class="PatchOperationSequence">
             <operations>
               <li Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName="GR_ParaMilk"]/thingCategories</xpath>
-                <value>
-                  <thingCategories>
-                    <li>DankPyon_Milk</li>
-                  </thingCategories>
-                </value>
-              </li>
-              <li Class="PatchOperationReplace">
-                <xpath>/Defs/ThingDef[defName="GR_GreenMilk"]/thingCategories</xpath>
+                <xpath>/Defs/ThingDef[defName="GR_ParaMilk" or
+                  defName="GR_GreenMilk"
+                  ]/thingCategories</xpath>
                 <value>
                   <thingCategories>
                     <li>DankPyon_Milk</li>
@@ -647,5 +608,95 @@
         </li>
       </operations>
     </match>
+  </Operation>
+  <!-- Add baked MO baked items to electric stove -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/RecipeDef[defName="DankPyon_BakeBread" or
+            defName="DankPyon_CookMealApplePie" or
+            defName="DankPyon_CookMealLemonCake" or
+            defName="DankPyon_CookMealQuiche" or
+            defName="DankPyon_CookMealPumpkinPie" or
+            defName="DankPyon_CookMealCarrotCake" or
+            defName="DankPyon_CookMealGriffonBerryPie"
+            ]/recipeUsers</xpath>
+    <order>Append</order>
+    <value>
+      <li>ElectricStove</li>
+    </value>
+  </Operation>
+  <!-- Fix carrot cake description and jobString -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealCarrotCake"]/description</xpath>
+    <value>
+      <description>Bake 3 carrot cakes.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealCarrotCake"]/jobString</xpath>
+    <value>
+      <jobString>Baking 3 carrot cakes.</jobString>
+    </value>
+  </Operation>
+  <!-- Fix vegetarian meal rations -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealRationsVegan" or
+            defName="DankPyon_CookMealRationsVeganBulk"
+            ]/recipeUsers</xpath>
+    <value>
+      <recipeUsers>
+        <li>Campfire</li>
+        <li>FueledStove</li>
+        <li>ElectricStove</li>
+      </recipeUsers>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealRationsVegan"]/description</xpath>
+    <value>
+      <description>Prepare a vegetarian packaged ration from plant ingredients. Much of the ingredients are wasted in the preservation process.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealRationsVegan"]/ingredients</xpath>
+    <value>
+      <ingredients>
+        <li>
+          <filter>
+            <customSummary>vegetarian ingredients</customSummary>
+            <categories>
+              <li>PlantFoodRaw</li>
+              <li>AnimalProductRaw</li>
+            </categories>
+          </filter>
+          <count>0.85</count>
+        </li>
+      </ingredients>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealRationsVeganBulk"]/description</xpath>
+    <value>
+      <description>Prepare vegetarian packaged rations from plant ingredients. Much of the ingredients are wasted in the preservation process.</description>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealRationsVeganBulk"]/ingredients</xpath>
+    <value>
+      <ingredients>
+        <li>
+          <filter>
+            <customSummary>vegetarian ingredients</customSummary>
+            <categories>
+              <li>PlantFoodRaw</li>
+              <li>AnimalProductRaw</li>
+            </categories>
+          </filter>
+          <count>4.25</count>
+        </li>
+      </ingredients>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/RecipeDef[defName="DankPyon_CookMealRationsVeganBulkier"]</xpath>
   </Operation>
 </Patch>
