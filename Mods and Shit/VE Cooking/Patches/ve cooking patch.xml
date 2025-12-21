@@ -1,13 +1,49 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <Patch>
-
-                <Operation Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/ThingDef[defName="VCE_Grill"]/label</xpath>
-                    <value>
-                        <label>fueled grill</label>
-                    </value>
-                </Operation>
-
-
+  <Operation Class="PatchOperationReplace">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="VCE_Grill"]/label</xpath>
+    <value>
+      <label>fueled grill</label>
+    </value>
+  </Operation>
+  <!-- Medieval Overhaul -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Medieval Overhaul</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <!-- Bakes cookable in oven and electric cooking table -->
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/RecipeDef[defName="VCE_CookBakeSimple" or
+            defName="VCE_CookBakeSimpleBulk" or
+            defName="VCE_CookBakeFine" or
+            defName="VCE_CookBakeFineBulk" or
+            defName="VCE_CookBakeLavish" or
+            defName="VCE_CookBakeLavishBulk" or
+            defName="VCE_CookBakeGourmet" or
+            defName="VCE_CookBakeGourmetBulk"
+            ]/recipeUsers</xpath>
+          <value>
+            <recipeUsers>
+              <li>ElectricStove</li>
+              <li>DankPyon_StoneOven</li>
+            </recipeUsers>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/RecipeDef[defName="VCE_CookBakeSimpleBulk" or
+            defName="VCE_CookBakeFineBulk" or
+            defName="VCE_CookBakeLavishBulk" or
+            defName="VCE_CookBakeGourmetBulk"
+            ]/recipeUsers</xpath>
+          <order>Append</order>
+          <value>
+            <li>DankPyon_StoneOvenLarge</li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
 </Patch>
