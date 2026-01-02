@@ -503,6 +503,22 @@
             </thingCategories>
           </value>
         </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="DankPyon_JuiceApple"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>VBE_DrinksNonAlcoholic</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/ThingDef[defName="DankPyon_JuiceAppleUnfermented"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>VBE_Musts</li>
+            </thingCategories>
+          </value>
+        </li>
       </operations>
     </match>
   </Operation>
@@ -514,7 +530,7 @@
     <match Class="PatchOperationSequence">
       <operations>
         <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="AA_NightMilk" or 
+          <xpath>/Defs/ThingDef[defName="AA_NightMilk" or
             defName="AA_BlueMilk" or
             defName="AA_GowMilk"
             ]/thingCategories</xpath>
@@ -606,19 +622,71 @@
             </thingCategories>
           </value>
         </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="DA_MufftonMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <!-- Mythic Ages: Megafauna Bestiary -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Mythic Ages: Megafauna Bestiary</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="MA_MossmireMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="MA_DuskMilk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+  <!-- Royal Thrumbos (Continued) -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Royal Thrumbos (Continued)</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ThingDef[defName="RoyalThrumbo_Milk"]/thingCategories</xpath>
+          <value>
+            <thingCategories>
+              <li>DankPyon_Milk</li>
+            </thingCategories>
+          </value>
+        </li>
       </operations>
     </match>
   </Operation>
   <!-- Add baked MO baked items to electric stove -->
   <Operation Class="PatchOperationAdd">
     <xpath>Defs/RecipeDef[defName="DankPyon_BakeBread" or
-            defName="DankPyon_CookMealApplePie" or
-            defName="DankPyon_CookMealLemonCake" or
-            defName="DankPyon_CookMealQuiche" or
-            defName="DankPyon_CookMealPumpkinPie" or
-            defName="DankPyon_CookMealCarrotCake" or
-            defName="DankPyon_CookMealGriffonBerryPie"
-            ]/recipeUsers</xpath>
+      defName="DankPyon_CookMealApplePie" or
+      defName="DankPyon_CookMealLemonCake" or
+      defName="DankPyon_CookMealQuiche" or
+      defName="DankPyon_CookMealPumpkinPie" or
+      defName="DankPyon_CookMealCarrotCake" or
+      defName="DankPyon_CookMealGriffonBerryPie"
+      ]/recipeUsers</xpath>
     <order>Append</order>
     <value>
       <li>ElectricStove</li>
@@ -640,8 +708,8 @@
   <!-- Fix vegetarian meal rations -->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/RecipeDef[defName="DankPyon_CookMealRationsVegan" or
-            defName="DankPyon_CookMealRationsVeganBulk"
-            ]/recipeUsers</xpath>
+      defName="DankPyon_CookMealRationsVeganBulk"
+      ]/recipeUsers</xpath>
     <value>
       <recipeUsers>
         <li>Campfire</li>
@@ -699,4 +767,53 @@
   <Operation Class="PatchOperationRemove">
     <xpath>Defs/RecipeDef[defName="DankPyon_CookMealRationsVeganBulkier"]</xpath>
   </Operation>
+
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DankPyon_Honeycomb"]/thingCategories</xpath>
+    <value>
+      <thingCategories>
+        <li>DankPyon_Honey</li>
+      </thingCategories>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DankPyon_Sugarcane"]/thingCategories</xpath>
+    <value>
+      <thingCategories>
+        <li>PlantMatter</li>
+      </thingCategories>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DankPyon_Sugarcane"]/ingestible</xpath>
+    <value>
+      <ingestible>
+        <preferability>DesperateOnly</preferability>
+        <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+      </ingestible>
+    </value>
+  </Operation>
+
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DankPyon_RawHerb"]/thingCategories</xpath>
+    <value>
+      <thingCategories>
+        <li>PlantMatter</li>
+      </thingCategories>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="DankPyon_RawHerb"]/ingestible</xpath>
+    <value>
+      <ingestible>
+        <preferability>DesperateOnly</preferability>
+        <canAutoSelectAsFoodForCaravan>false</canAutoSelectAsFoodForCaravan>
+      </ingestible>
+    </value>
+  </Operation>
+
+
 </Patch>
