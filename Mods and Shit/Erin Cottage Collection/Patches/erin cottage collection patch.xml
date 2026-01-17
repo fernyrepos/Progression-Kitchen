@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationRemove">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="CCol_WoodStove"]/designatorDropdown</xpath>
+  </Operation>
+
+  <Operation Class="PatchOperationRemove">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="CCol_ChemfuelStove"]/designatorDropdown</xpath>
+  </Operation>
+
+  <Operation Class="PatchOperationRemove">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="CCol_ElectricStove"]/designatorDropdown</xpath>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="CCol_ChemfuelStove"]/designationCategory</xpath>
+    <value>
+        <designationCategory></designationCategory>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="CCol_ElectricStove"]/designationCategory</xpath>
+    <value>
+        <designationCategory></designationCategory>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="CCol_WoodStove"]/label</xpath>
+    <value>
+        <label>fueled heater cookstove</label>
+    </value>
+  </Operation>
+
+</Patch>

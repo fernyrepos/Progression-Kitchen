@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<VEF.Buildings.HiddenDesignatorsDef>
+		<defName>FernyErinCottageProgKitchen_HiddenDesignators</defName>
+		<hiddenDesignators>			
+			<li>CCol_ChemfuelStove</li>
+			<li>CCol_ElectricStove</li>
+		</hiddenDesignators>							
+	</VEF.Buildings.HiddenDesignatorsDef>
+</Defs>
