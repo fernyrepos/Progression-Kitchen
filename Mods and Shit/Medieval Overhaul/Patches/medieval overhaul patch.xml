@@ -53,42 +53,6 @@
       <label>basic cooking table</label>
     </value>
   </Operation>
-  <!-- Rusting oven -->
-  <Operation Class="PatchOperationConditional">
-    <success>Always</success>
-    <xpath>/Defs/ThingDef[defName="DankPyon_StoneOven"]/researchPrerequisites</xpath>
-    <match Class="PatchOperationSequence">
-      <operations>
-        <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="DankPyon_StoneOven"]/researchPrerequisites</xpath>
-          <value>
-            <researchPrerequisites>
-              <li>DankPyon_IntermediateCooking</li>
-            </researchPrerequisites>
-          </value>
-        </li>
-      </operations>
-    </match>
-    <nomatch Class="PatchOperationSequence">
-      <operations>
-        <li Class="PatchOperationAdd">
-          <xpath>/Defs/ThingDef[defName="DankPyon_StoneOven"]</xpath>
-          <value>
-            <researchPrerequisites>
-              <li>DankPyon_IntermediateCooking</li>
-            </researchPrerequisites>
-          </value>
-        </li>
-      </operations>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <success>Always</success>
-    <xpath>Defs/ThingDef[defName="DankPyon_StoneOven"]/label</xpath>
-    <value>
-      <label>oven</label>
-    </value>
-  </Operation>
   <!-- VE COOKING OVERLAP -->
   <Operation Class="PatchOperationFindMod">
     <mods>
@@ -154,28 +118,28 @@
           </value>
         </li>
         <!-- SEARING STUFF -->
-        <li Class="PatchOperationReplace">
+        <!-- <li Class="PatchOperationReplace">
           <success>Always</success>
           <xpath>Defs/ResearchProjectDef[defName="DankPyon_Grill"]/label</xpath>
           <value>
             <label>searing</label>
           </value>
-        </li>
-        <li Class="PatchOperationReplace">
+        </li> -->
+        <!-- <li Class="PatchOperationReplace">
           <success>Always</success>
           <xpath>Defs/ResearchProjectDef[defName="DankPyon_Grill"]/description</xpath>
           <value>
             <description>Learn how to sear meat over an open flame, creating delicious seared sausages and meats.</description>
           </value>
-        </li>
-        <li Class="PatchOperationReplace">
+        </li> -->
+        <!-- <li Class="PatchOperationReplace">
           <success>Always</success>
           <xpath>Defs/ThingDef[defName="DankPyon_Grill"]/label</xpath>
           <value>
             <label>searing brazier</label>
           </value>
-        </li>
-        <li Class="PatchOperationReplace">
+        </li> -->
+        <!-- <li Class="PatchOperationReplace">
           <xpath>/Defs/RecipeDef[contains(defName, "VCE_CookGrillFine")]/researchPrerequisites</xpath>
           <value>
             <researchPrerequisites>
@@ -198,7 +162,7 @@
               <li>VCE_Grilling</li>
             </researchPrerequisites>
           </value>
-        </li>
+        </li> -->
         <li Class="PatchOperationReplace">
           <success>Always</success>
           <xpath>Defs/ThingDef[defName="DankPyon_MealGrilledSausages"]/label</xpath>

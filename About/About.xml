@@ -38,7 +38,8 @@
 		<li>VanillaExpanded.VCookEHaute</li>
 		<li>Van.Beasts</li>
 		<li>erin.cottagecollection</li>
-		<li>ferny.betterarchitect</li>
-		<li>ferny.progressioncore</li>
+		<!-- TBC: This causes a sorting dependency loop -->
+		<!-- <li>ferny.betterarchitect</li>
+		<li>ferny.progressioncore</li> -->
 	</loadAfter>
 </ModMetaData>

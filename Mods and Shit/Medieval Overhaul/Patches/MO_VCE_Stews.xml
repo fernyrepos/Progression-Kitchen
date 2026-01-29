@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+        <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef[defName="DankPyon_StewPot"]/label</xpath>
+        <value>
+		<label>soups &amp; stews</label>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DankPyon_StewPot"]/researchPrerequisites</xpath>
+        <value>
+            <researchPrerequisites>
+                <li>DankPyon_StewPot</li>
+            </researchPrerequisites>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/RecipeDef[contains(defName, "DankPyon_CookMealCheeseSoup")]/researchPrerequisites</xpath>
+        <value>
+            <li>DankPyon_StewPot</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[contains(defName, "DankPyon_CookMealCheeseSoup")]/recipeUsers</xpath>
+        <value>
+            <recipeUsers>
+                <li>DankPyon_StewPot</li>
+            </recipeUsers>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[contains(defName, "DankPyon_CookMealBreadSoup")]/researchPrerequisites</xpath>
+        <value>
+            <researchPrerequisites>
+                <li>DankPyon_StewPot</li>
+            </researchPrerequisites>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[contains(defName, "DankPyon_CookMealBreadSoup")]/recipeUsers</xpath>
+        <value>
+            <recipeUsers>
+                <li>DankPyon_StewPot</li>
+            </recipeUsers>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Cooking Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/RecipeDef[defName="VCE_CookSoupSimple"]/researchPrerequisite</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>DankPyon_StewPot</li>
+                            <li>Electricity</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/RecipeDef[defName="VCE_CookSoupFine"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>DankPyon_StewPot</li>
+                            <li>Electricity</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/RecipeDef[defName="VCE_CookSoupLavish"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>DankPyon_StewPot</li>
+                            <li>DankPyon_IntermediateCooking</li>
+                            <li>Electricity</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/RecipeDef[defName="VCE_CookSoupGourmet"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>DankPyon_StewPot</li>
+                            <li>DankPyon_AdvancedCooking</li>
+                            <li>Electricity</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VCE_ElectricPot"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>DankPyon_StewPot</li>
+                            <li>Electricity</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/ResearchProjectDef[defName="VCE_SoupCooking"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Cooking Expanded - Stews</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/RecipeDef[defName="VCE_CookStewSimple"]/researchPrerequisite</xpath>
+                    <value>
+                        <researchPrerequisite>
+                            <li>DankPyon_StewPot</li>
+                        </researchPrerequisite>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/RecipeDef[defName="VCE_CookStewFine"]/researchPrerequisite</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>DankPyon_StewPot</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/RecipeDef[defName="VCE_CookStewLavish"]/researchPrerequisite</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>DankPyon_StewPot</li>
+                            <li>DankPyon_IntermediateCooking</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="VCE_StewPot"]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>DankPyon_StewPot</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/ResearchProjectDef[defName="VCE_StewCooking"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>
