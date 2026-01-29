@@ -142,7 +142,7 @@
                         </researchPrerequisites>
                     </value>
                 </li>
-                <li Class="PatchOperationRemove">
+                <li Class="PatchOperationRemove"> 
                     <xpath>Defs/ResearchProjectDef[defName="VCE_StewCooking"]</xpath>
                 </li>
             </operations>
