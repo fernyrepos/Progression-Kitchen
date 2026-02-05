@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[contains(defName, "DankPyon_MakeSausages")]/researchPrerequisites</xpath>
+        <value>
+            <researchPrerequisites>
+                <li>DankPyon_Grill</li>
+            </researchPrerequisites>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Cooking Expanded</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/RecipeDef[contains(defName, "VCE_CookGrill")]/recipeUsers</xpath>
+                    <value>
+                        <recipeUsers>
+                            <li>DankPyon_Grill</li>
+                        </recipeUsers>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[contains(defName, "VCE_CookGrillSimple")]</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>DankPyon_Grill</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/RecipeDef[contains(defName, "VCE_CookGrillFine")]/researchPrerequisites</xpath>
+                    <value>
+                        <researchPrerequisites>
+                            <li>DankPyon_Grill</li>
+                        </researchPrerequisites>
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/ThingDef[defName="VCE_Grill"]/researchPrerequisites</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/ThingDef[defName="VCE_Grill"]/designationCategory</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>Defs/ResearchProjectDef[defName="VCE_Grilling"]</xpath>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>
