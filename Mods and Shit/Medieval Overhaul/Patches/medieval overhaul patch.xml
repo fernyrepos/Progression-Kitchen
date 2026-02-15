@@ -158,7 +158,7 @@
           <success>Always</success>
           <xpath>Defs/ResearchProjectDef[defName="DankPyon_Grill"]/label</xpath>
           <value>
-            <label>searing</label>
+            <label>searing brazier</label>
           </value>
         </li>
         <li Class="PatchOperationReplace">
