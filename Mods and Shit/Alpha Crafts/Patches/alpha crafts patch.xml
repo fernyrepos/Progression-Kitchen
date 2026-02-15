@@ -1,4 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
+                <!-- vinegar brewing -->
+                <Operation Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ResearchProjectDef[defName="AC_VinegarBrewing"]/label</xpath>
+                    <value>
+                        <label>artisan fermenter</label>
+                    </value>
+                </Operation>
 
+                <!-- artisan dairy processing -->
+                <Operation Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ResearchProjectDef[defName="AC_VinegarBrewing"]/label</xpath>
+                    <value>
+                        <label>dairy processing station</label>
+                    </value>
+                </Operation>
+
+                <!-- artisanal grinding -->
+                <Operation Class="PatchOperationReplace">
+                    <success>Always</success>
+                    <xpath>Defs/ResearchProjectDef[defName="AC_ArtisanalGrinding"]/label</xpath>
+                    <value>
+                        <label>artisanal grinder</label>
+                    </value>
+                </Operation>
 </Patch>

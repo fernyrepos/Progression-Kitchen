@@ -30,4 +30,14 @@
         </nomatch>
     </Operation>
 
+    <!-- soybean fermentation -->
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>Defs/ResearchProjectDef[defName="VCE_SoyFermentation"]/label</xpath>
+        <value>
+            <label>soy sauce fermenter</label>
+        </value>
+    </Operation>
+
+
 </Patch>

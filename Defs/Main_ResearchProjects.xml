@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Butcher table -->
+	<ResearchProjectDef>
+		<defName>Ferny_ButcherTable</defName>
+		<label>Butcher table</label>
+		<description>Construct a heavy table for butchering dead creatures into pieces of raw meat for meal preperation.</description>
+		<baseCost>500</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>3.00</researchViewY>
+		<tags>
+			<li>ClassicStart</li>
+		</tags>
+	</ResearchProjectDef>
+
+</Defs>
