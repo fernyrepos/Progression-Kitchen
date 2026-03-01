@@ -53,42 +53,6 @@
       <label>basic cooking table</label>
     </value>
   </Operation>
-  <!-- Rusting oven -->
-  <Operation Class="PatchOperationConditional">
-    <success>Always</success>
-    <xpath>/Defs/ThingDef[defName="DankPyon_StoneOven"]/researchPrerequisites</xpath>
-    <match Class="PatchOperationSequence">
-      <operations>
-        <li Class="PatchOperationReplace">
-          <xpath>/Defs/ThingDef[defName="DankPyon_StoneOven"]/researchPrerequisites</xpath>
-          <value>
-            <researchPrerequisites>
-              <li>DankPyon_IntermediateCooking</li>
-            </researchPrerequisites>
-          </value>
-        </li>
-      </operations>
-    </match>
-    <nomatch Class="PatchOperationSequence">
-      <operations>
-        <li Class="PatchOperationAdd">
-          <xpath>/Defs/ThingDef[defName="DankPyon_StoneOven"]</xpath>
-          <value>
-            <researchPrerequisites>
-              <li>DankPyon_IntermediateCooking</li>
-            </researchPrerequisites>
-          </value>
-        </li>
-      </operations>
-    </nomatch>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <success>Always</success>
-    <xpath>Defs/ThingDef[defName="DankPyon_StoneOven"]/label</xpath>
-    <value>
-      <label>oven</label>
-    </value>
-  </Operation>
   <!-- VE COOKING OVERLAP -->
   <Operation Class="PatchOperationFindMod">
     <mods>
@@ -402,126 +366,7 @@
       </operations>
     </match>
   </Operation>
-  <!-- VFE MEDIEVAL 2 -->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Vanilla Factions Expanded - Medieval 2</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-      <operations>
-        <li Class="PatchOperationReplace">
-          <xpath>Defs/ThingDef[defName="DankPyon_Plant_Grape"]/plant/sowResearchPrerequisites</xpath>
-          <value>
-            <sowResearchPrerequisites>
-              <li>VFEM2_Wine</li>
-            </sowResearchPrerequisites>
-          </value>
-        </li>
-        <li Class="PatchOperationReplace">
-          <xpath>Defs/RecipeDef[defName="DankPyon_MakeMustWine"]/researchPrerequisites</xpath>
-          <value>
-            <researchPrerequisites>
-              <li>VFEM2_Wine</li>
-            </researchPrerequisites>
-          </value>
-        </li>
-        <li Class="PatchOperationReplace">
-          <xpath>Defs/ThingDef[defName="DankPyon_Wine"]/researchPrerequisites</xpath>
-          <value>
-            <researchPrerequisites>
-              <li>VFEM2_Wine</li>
-            </researchPrerequisites>
-          </value>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>Defs/ResearchProjectDef[defName="VFEM2_Wine"]</xpath>
-          <value>
-            <prerequisites>
-              <li>Brewing</li>
-            </prerequisites>
-          </value>
-        </li>
-        <li Class="PatchOperationAdd">
-          <xpath>Defs</xpath>
-          <value>
-            <ReplaceLib.ReplacerDef>
-              <defName>Ferny_MedievalOverhaul_VFEM2_ProgKitchen</defName>
-              <replacers>
-                <li>
-                  <replace>VFEM2_Plant_Grape</replace>
-                  <with>DankPyon_Plant_Grape</with>
-                </li>
-                <li>
-                  <replace>VFEM2_Must</replace>
-                  <with>DankPyon_MustWine</with>
-                </li>
-                <li>
-                  <replace>VFEM2_Wine</replace>
-                  <with>DankPyon_Wine</with>
-                </li>
-                <li>
-                  <replace>VFEM2_RawGrapes</replace>
-                  <with>DankPyon_RawGrapes</with>
-                </li>
-                <li>
-                  <replace>VFEM2_MeadFermentingBarrel</replace>
-                  <with>BarrelProcessor</with>
-                </li>
-                <li>
-                  <replace>VFEM2_VFEM2_WineBarrel</replace>
-                  <with>BarrelProcessor</with>
-                </li>
-                <li>
-                  <replace>VFEM2_Mead</replace>
-                  <with>DankPyon_Mead</with>
-                </li>
-              </replacers>
-            </ReplaceLib.ReplacerDef>
-          </value>
-        </li>
-        <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="BarrelProcessor"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="VFEM2_Mead"]</xpath>
-        </li>
-        <li Class="PatchOperationRemove">
-          <xpath>Defs/ThingDef[defName="BarrelProcessor"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="VFEM2_Wine"]</xpath>
-        </li>
-      </operations>
-    </match>
-  </Operation>
-  <!-- Vanilla Brewing Expanded -->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Vanilla Brewing Expanded</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-      <operations>
-        <li Class="PatchOperationAdd">
-          <xpath>Defs/ThingDef[defName="DankPyon_Mead" or defName="DankPyon_Wine"]</xpath>
-          <value>
-            <thingCategories>
-              <li>VBE_DrinksSimpleSpirits</li>
-            </thingCategories>
-          </value>
-        </li>
-        <li Class="PatchOperationReplace">
-          <xpath>Defs/ThingDef[defName="DankPyon_JuiceApple"]/thingCategories</xpath>
-          <value>
-            <thingCategories>
-              <li>VBE_DrinksNonAlcoholic</li>
-            </thingCategories>
-          </value>
-        </li>
-        <li Class="PatchOperationReplace">
-          <xpath>Defs/ThingDef[defName="DankPyon_JuiceAppleUnfermented"]/thingCategories</xpath>
-          <value>
-            <thingCategories>
-              <li>VBE_Musts</li>
-            </thingCategories>
-          </value>
-        </li>
-      </operations>
-    </match>
-  </Operation>
+
   <!-- ALPHA ANIMALS MILK CATEGORIES -->
   <Operation Class="PatchOperationFindMod">
     <mods>
@@ -814,6 +659,31 @@
       </ingestible>
     </value>
   </Operation>
-
-
+  <!-- MO research projects requiring schematics are really hard to get if no MO factions are spawned! -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraderKindDef[defName="Orbital_Exotic"]/stockGenerators</xpath>
+    <value>
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>DankPyon_Schematic</tradeTag>
+        <countRange>1~1</countRange>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/TraderKindDef[defName="Caravan_Outlander_Exotic"]/stockGenerators</xpath>
+    <value>
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>DankPyon_Schematic</tradeTag>
+        <countRange>1~1</countRange>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ResearchProjectDef[defName="DankPyon_IntermediateCooking"]</xpath>
+    <value>
+      <tags>
+        <li>ClassicStart</li>
+      </tags>
+    </value>
+  </Operation>
 </Patch>
