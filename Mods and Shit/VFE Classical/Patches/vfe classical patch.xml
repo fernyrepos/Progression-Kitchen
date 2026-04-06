@@ -45,6 +45,135 @@
                         </ReplaceLib.ReplacerDef>
                     </value>
                 </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <!-- Hay drying rack (1x2) -->
+                        <ThingDef ParentName="BuildingBase">
+                            <defName>DankPyon_HayDryingRack_Small</defName>
+                            <label>hay drying rack (1x2)</label>
+                            <description>A wooden rack to dry hay under the sun to dehydrate it into
+                                straw.</description>
+                            <drawerType>MapMeshAndRealTime</drawerType>
+                            <graphicData>
+                                <texPath>Things/Building/Production/DryingRack1x2/DryingRack1x2</texPath>
+                                <graphicClass>Graphic_Multi</graphicClass>
+                                <shaderType>CutoutComplex</shaderType>
+                                <drawSize>(3,3)</drawSize>
+                                <damageData>
+                                    <rect>(0.05,0.1,0.9,0.9)</rect>
+                                </damageData>
+                            </graphicData>
+                            <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+                            <altitudeLayer>Building</altitudeLayer>
+                            <canBeUsedUnderRoof>false</canBeUsedUnderRoof>
+                            <passability>PassThroughOnly</passability>
+                            <fillPercent>0.5</fillPercent>
+                            <pathCost>70</pathCost>
+                            <statBases>
+                                <WorkToBuild>500</WorkToBuild>
+                                <Mass>5</Mass>
+                                <MaxHitPoints>100</MaxHitPoints>
+                                <Flammability>1.0</Flammability>
+                            </statBases>
+                            <size>(2,1)</size>
+                            <stuffCategories>
+                                <li>DankPyon_RawWood</li>
+                            </stuffCategories>
+                            <costStuffCount>50</costStuffCount>
+                            <thingClass>Building_WorkTable</thingClass>
+                            <comps>
+                                <li Class="ProcessorFramework.CompProperties_Processor">
+                                    <capacity>100</capacity>
+                                    <independentProcesses>false</independentProcesses>
+                                    <parallelProcesses>false</parallelProcesses>
+                                    <dropIngredients>true</dropIngredients>
+                                    <showProductIcon>true</showProductIcon>
+                                    <barOffset>(0.0, 0.25)</barOffset>
+                                    <barScale>(1.0, 1.0)</barScale>
+                                    <colorCoded>false</colorCoded>
+                                    <processes>
+                                        <li>DankPyon_StrawProcess</li>
+                                    </processes>
+                                </li>
+                                <li Class="CompProperties_Forbiddable" />
+                            </comps>
+                            <placeWorkers>
+                                <li>PlaceWorker_NotUnderRoof</li>
+                            </placeWorkers>
+                            <tickerType>Rare</tickerType>
+                            <designationCategory>Production</designationCategory>
+                        </ThingDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs</xpath>
+                    <value>
+                        <!-- Hay drying rack (2x2) -->
+                        <ThingDef ParentName="BuildingBase">
+                            <defName>DankPyon_HayDryingRack_Big</defName>
+                            <label>hay drying rack (2x2)</label>
+                            <description>A wooden rack to dry hay under the sun to dehydrate it into
+                                straw.</description>
+                            <drawerType>MapMeshAndRealTime</drawerType>
+                            <graphicData>
+                                <texPath>Things/Building/Production/DryingRack2x2/DryingRack</texPath>
+                                <graphicClass>Graphic_Multi</graphicClass>
+                                <shaderType>CutoutComplex</shaderType>
+                                <drawSize>(3,3)</drawSize>
+                                <damageData>
+                                    <rect>(0.05,0.1,0.9,0.9)</rect>
+                                </damageData>
+                            </graphicData>
+                            <terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+                            <altitudeLayer>Building</altitudeLayer>
+                            <canBeUsedUnderRoof>false</canBeUsedUnderRoof>
+                            <passability>PassThroughOnly</passability>
+                            <fillPercent>0.5</fillPercent>
+                            <pathCost>70</pathCost>
+                            <statBases>
+                                <WorkToBuild>500</WorkToBuild>
+                                <Mass>10</Mass>
+                                <MaxHitPoints>100</MaxHitPoints>
+                                <Flammability>1.0</Flammability>
+                            </statBases>
+                            <size>(2,2)</size>
+                            <stuffCategories>
+                                <li>DankPyon_RawWood</li>
+                            </stuffCategories>
+                            <costStuffCount>100</costStuffCount>
+                            <comps>
+                                <li Class="ProcessorFramework.CompProperties_Processor">
+                                    <capacity>200</capacity>
+                                    <independentProcesses>false</independentProcesses>
+                                    <parallelProcesses>false</parallelProcesses>
+                                    <dropIngredients>true</dropIngredients>
+                                    <showProductIcon>true</showProductIcon>
+                                    <barOffset>(0.0, 0.25)</barOffset>
+                                    <barScale>(1.0, 1.0)</barScale>
+                                    <colorCoded>false</colorCoded>
+                                    <processes>
+                                        <li>DankPyon_StrawProcess</li>
+                                    </processes>
+                                </li>
+                                <li Class="CompProperties_Forbiddable" />
+                            </comps>
+                            <placeWorkers>
+                                <li>PlaceWorker_NotUnderRoof</li>
+                            </placeWorkers>
+                            <tickerType>Rare</tickerType>
+                            <designationCategory>Production</designationCategory>
+                        </ThingDef>
+                    </value>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>
+                        Defs/ThingDef[defName="DankPyon_DryingRack_Small"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="DankPyon_StrawProcess"]</xpath>
+                </li>
+                <li Class="PatchOperationRemove">
+                    <xpath>
+                        Defs/ThingDef[defName="DankPyon_DryingRack_Big"]/comps/li[@Class="ProcessorFramework.CompProperties_Processor"]/processes/li[.="DankPyon_StrawProcess"]</xpath>
+                </li>
             </operations>
         </match>
     </Operation>
