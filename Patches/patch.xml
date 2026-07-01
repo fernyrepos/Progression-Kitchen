@@ -36,6 +36,58 @@
                   </nomatch>
                 </Operation>
 
+<!-- Fueled stove research -->
+                <Operation Class="PatchOperationConditional">
+                  <xpath>/Defs/ThingDef[defName="FueledStove"]/researchPrerequisites</xpath>
+                  <match Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="FueledStove"]/researchPrerequisites</xpath>
+                    <value>
+                      <researchPrerequisites>
+                        <li>Ferny_FueledStove</li>
+                      </researchPrerequisites> 
+                   </value>
+                  </match>
+                  <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="FueledStove"]</xpath>
+                    <value>
+                      <researchPrerequisites>
+                        <li>Ferny_FueledStove</li>
+                      </researchPrerequisites> 
+                    </value>
+                  </nomatch>
+                </Operation>
+
+                <Operation Class="PatchOperationConditional">
+                  <xpath>/Defs/RecipeDef[starts-with(@Name, "CookMealFine")]/researchPrerequisites</xpath>
+                  <match Class="PatchOperationReplace">
+                    <xpath>/Defs/RecipeDef[starts-with(@Name, "CookMealFine")]/researchPrerequisites</xpath>
+                    <value>
+                      <researchPrerequisite>Ferny_FineMeals</researchPrerequisite> 
+                   </value>
+                  </match>
+                  <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[starts-with(@Name, "CookMealFine")]</xpath>
+                    <value>
+                      <researchPrerequisite>Ferny_FineMeals</researchPrerequisite> 
+                    </value>
+                  </nomatch>
+                </Operation>
+
+                <Operation Class="PatchOperationConditional">
+                  <xpath>/Defs/RecipeDef[starts-with(@Name, "CookMealLavish")]/researchPrerequisites</xpath>
+                  <match Class="PatchOperationReplace">
+                    <xpath>/Defs/RecipeDef[starts-with(@Name, "CookMealLavish")]/researchPrerequisites</xpath>
+                    <value>
+                      <researchPrerequisite>Ferny_LavishMeals</researchPrerequisite> 
+                   </value>
+                  </match>
+                  <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/RecipeDef[starts-with(@Name, "CookMealLavish")]</xpath>
+                    <value>
+                      <researchPrerequisite>Ferny_LavishMeals</researchPrerequisite> 
+                    </value>
+                  </nomatch>
+                </Operation>
 
 
 </Patch>

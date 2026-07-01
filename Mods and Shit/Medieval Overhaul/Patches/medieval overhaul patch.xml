@@ -10,6 +10,46 @@
       </researchPrerequisites>
     </value>
   </Operation>
+
+  <!-- May 24 2026, Smoker project depends on fueled stove -->
+  <Operation Class="PatchOperationReplace">
+    <success>Always</success>
+    <xpath>Defs/ResearchProjectDef[defName="DankPyon_Smoker"]/prerequisites</xpath>
+    <value>
+      <prerequisites>
+        <li>Ferny_FueledStove</li>
+      </prerequisites>
+    </value>
+  </Operation>
+
+  <!-- May 24 2026, Grill project depends on fueled stove -->
+  <Operation Class="PatchOperationReplace">
+    <success>Always</success>
+    <xpath>Defs/ResearchProjectDef[defName="DankPyon_Grill"]/prerequisites</xpath>
+    <value>
+      <prerequisites>
+        <li>Ferny_FueledStove</li>
+      </prerequisites>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <success>Always</success>
+    <xpath>Defs/ResearchProjectDef[defName="DankPyon_Oven"]/label</xpath>
+    <value>
+      <label>Large oven</label>
+    </value>
+  </Operation>
+
+
+
+
+
+
+
+
+
+
   <!--Grain and bread is the basis of human civilization-->
   <Operation Class="PatchOperationReplace">
     <xpath>Defs/ResearchProjectDef[defName="DankPyon_Oven"]/techLevel</xpath>
@@ -89,6 +129,27 @@
       <label>oven</label>
     </value>
   </Operation>
+
+
+<!-- renaming basic cooking to "fueled stove" -->
+  <Operation Class="PatchOperationReplace">
+    <success>Always</success>
+    <xpath>Defs/ThingDef[defName="DankPyon_StoneOven"]/label</xpath>
+    <value>
+      <label>oven</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>Defs/ResearchProjectDef[defName="DankPyon_BasicCooking"]</xpath>
+    <value>
+		<prerequisites>
+			<li>Ferny_FueledStove</li>
+		</prerequisites>    
+    </value>
+  </Operation>
+
   <!-- VE COOKING OVERLAP -->
   <Operation Class="PatchOperationFindMod">
     <mods>
@@ -153,6 +214,7 @@
             </ReplaceLib.ReplacerDef>
           </value>
         </li>
+
         <!-- SEARING STUFF -->
         <li Class="PatchOperationReplace">
           <success>Always</success>
@@ -399,9 +461,21 @@
             </thingCategories>
           </value>
         </li>
+
+
       </operations>
     </match>
   </Operation>
+
+
+
+
+
+
+
+
+
+
   <!-- VFE MEDIEVAL 2 -->
   <Operation Class="PatchOperationFindMod">
     <mods>
@@ -488,6 +562,9 @@
       </operations>
     </match>
   </Operation>
+
+
+
   <!-- Vanilla Brewing Expanded -->
   <Operation Class="PatchOperationFindMod">
     <mods>
@@ -522,6 +599,10 @@
       </operations>
     </match>
   </Operation>
+
+
+
+
   <!-- ALPHA ANIMALS MILK CATEGORIES -->
   <Operation Class="PatchOperationFindMod">
     <mods>

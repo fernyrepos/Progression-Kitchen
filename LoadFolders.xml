@@ -15,7 +15,9 @@
     <li IfModActive="OskarPotocki.VFE.Medieval2">Mods and Shit/VFE Medieval 2</li>
     <li IfModActive="vanillaexpanded.vbrewecandt">Mods and Shit/VBE CAT</li>
     <li IfModActive="VanillaExpanded.VCookEHaute">Mods and Shit/VCE Haute</li>
-    <li IfModActive="erin.cottagecollection">Mods and Shit/Erin Cottage Collection</li>
+    <!-- <li IfModActive="erin.cottagecollection">Mods and Shit/Erin Cottage Collection</li> -->
     <li IfModActive="vanillaexpanded.vplantsemore">Mods and Shit/VPE More Plants</li>
+    <li IfModActiveAll="vanillaexpanded.vcooke,VanillaExpanded.VPlantsE">Mods and Shit/VCE + VPE</li>
+    <li IfModActiveAll="vanillaexpanded.vcooke,vanillaexpanded.vbrewe">Mods and Shit/VCE + VBE</li>
   </v1.5>
 </loadFolders>

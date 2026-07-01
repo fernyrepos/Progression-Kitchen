@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
+
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>Defs/ThingDef[defName="VCE_SushiPrepTable"]/label</xpath>
+        <value>
+            <label>sushi table</label>
+        </value>
+    </Operation>
+
+
     <Operation Class="PatchOperationConditional">
     <success>Always</success>
         <xpath>/Defs/ThingDef[defName="VCE_SushiPrepTable"]/researchPrerequisites</xpath>
@@ -38,6 +48,47 @@
             <label>soy sauce fermenter</label>
         </value>
     </Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ResearchProjectDef[defName="VCE_SoyFermentation"]/prerequisites</xpath>
+			<match Class="PatchOperationReplace">
+			<xpath>/Defs/ResearchProjectDef[defName="VCE_SoyFermentation"]/prerequisites</xpath>
+				<value>
+					<prerequisites>
+						<li>Ferny_GourmetMeals</li>
+					</prerequisites>
+				</value>
+			</match>
+			<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ResearchProjectDef[defName="VCE_SoyFermentation"]</xpath>
+				<value>
+					<prerequisites>
+						<li>Ferny_GourmetMeals</li>
+					</prerequisites>
+				</value>
+			</nomatch>
+	</Operation>
+
+
+
+
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>Defs/RecipeDef[defName="VCE_WasabiPaste"]/researchPrerequisite</xpath>
+        <value>
+            <researchPrerequisite>Ferny_WasabiPaste</researchPrerequisite>
+        </value>
+    </Operation>
+
+<!-- OLD: A paste made from ground wasabi rhizomes and used as a pungent condiment for sushi and other foods. It is similar in taste to hot mustard rather than chili peppers in that it stimulates the nose more than the tongue. It loses its flavour and deteriorates extremely fast. -->
+
+  <Operation Class="PatchOperationReplace">
+      <success>Always</success>
+      <xpath>Defs/ThingDef[defName="VCE_WasabiPaste"]/description</xpath>
+      <value>
+      <description>A paste made from ground wasabi rhizomes and used as a pungent condiment for sushi and other foods. When applied to a gourmet meal or sushi, it provides a warming effect to the consumer. It loses its flavour and deteriorates extremely fast.</description>
+      </value>
+  </Operation>
 
 
 </Patch>

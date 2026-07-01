@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ResearchProjectDef>
+		<defName>Ferny_Sushi</defName>
+		<label>sushi table</label>
+		<description>Learn the art of sushi, made from rice and fish.</description>
+		<baseCost>700</baseCost>
+		<tab>Main</tab>
+		<techLevel>Medieval</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>Ferny_FueledStove</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_WasabiPaste</defName>
+		<label>wasabi paste</label>
+		<description>Learn the process of making spicy warming wasabi paste for use as a condiment.</description>
+		<baseCost>80</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>VCE_CondimentsResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+</Defs>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>Ferny_GoJuiceStock</defName>
+		<label>go-juice stock</label>
+		<description>Manufacture a gelatinized cube of go-juice, able to be digested rather than injected. Applying it to a gourmet meal grants it a very diluted version of the drug without risk of addictions.</description>
+		<baseCost>80</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>VCE_CondimentsResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_LuciferiumPowder</defName>
+		<label>luciferium powder</label>
+		<description>Learn the process of turning luciferium into a fine powder for use as a condiment. Applying it to a gourmet meal grants it a very diluted version of the drug without risk of addictions.</description>
+		<baseCost>80</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>VCE_CondimentsResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_WakeUpPowder</defName>
+		<label>wake-up powder</label>
+		<description>Learn the process of turning wake-up into a fine powder for use as a condiment. Applying it to a gourmet meal grants it a very diluted version of the drug without risk of addictions.</description>
+		<baseCost>80</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>VCE_CondimentsResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+</Defs>

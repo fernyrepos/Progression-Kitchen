@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ResearchProjectDef>
+		<defName>Ferny_AgaveNectar</defName>
+		<label>agave nectar</label>
+		<description>Learn the process of extracting and bottling immunity-boosting nectar from agave fruit to use as a condiment.</description>
+		<baseCost>80</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>VCE_CondimentsResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_ChocolateSyrup</defName>
+		<label>chocolate syrup</label>
+		<description>Learn the process of making delicious mood-boosting chocolate syrup for use as a condiment.</description>
+		<baseCost>80</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>VCE_CondimentsResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<!-- <ResearchProjectDef>
+		<defName>Ferny_GoJuiceStock</defName>
+		<label>go juice stock</label>
+		<description>Learn the process of diluting go-juice into a gelatinized cube for use as a condiment.</description>
+		<baseCost>80</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+	</ResearchProjectDef> -->
+
+	<ResearchProjectDef>
+		<defName>Ferny_Mayo</defName>
+		<label>mayo</label>
+		<description>Learn the process of turning eggs into creamy, flavorful mayo for use as a hunger rate lowering condiment.</description>
+		<baseCost>80</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>VCE_CondimentsResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_InsectJellySweetener</defName>
+		<label>insect jelly sweetener</label>
+		<description>Learn the process of turning insect jelly into flavorful mood-boosting sweetener for use as a condiment.</description>
+		<baseCost>80</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>VCE_CondimentsResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_SmokeleafButter</defName>
+		<label>smokeleaf butter</label>
+		<description>Learn the process of chruning smokeleaf and milk into an easy high for use as a condiment.</description>
+		<baseCost>80</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>VCE_CondimentsResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_GourmetMeals</defName>
+		<label>gourmet meals</label>
+		<description>Learn the process of making exquisite gourmet meals that will delight your colonists, and allow for condiments.</description>
+		<baseCost>800</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>Ferny_LavishMeals</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_Desserts</defName>
+		<label>desserts</label>
+		<description>Learn the process of making fruity desserts, so exciting to eat that it may even be mildly addictive.</description>
+		<baseCost>300</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>Ferny_FueledStove</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_FineDesserts</defName>
+		<label>fine desserts</label>
+		<description>Refine the art of making particularly delicious fruity desserts.</description>
+		<baseCost>500</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>Ferny_Desserts</li>
+			<li>Ferny_FineMeals</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_LavishDesserts</defName>
+		<label>lavish desserts</label>
+		<description>Refine the art of making objectively splendid fruity desserts.</description>
+		<baseCost>800</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>Ferny_FineDesserts</li>
+			<li>Ferny_LavishMeals</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+
+	<ResearchProjectDef>
+		<defName>Ferny_GourmetDesserts</defName>
+		<label>gourmet desserts</label>
+		<description>Further refine the art of making absolutely spectacular fruity desserts.</description>
+		<baseCost>1000</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>Ferny_GourmetMeals</li>
+			<li>Ferny_LavishDesserts</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+
+	<ResearchProjectDef>
+		<defName>Ferny_Bakes</defName>
+		<label>bakes</label>
+		<description>text.todo</description>
+		<baseCost>500</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>Ferny_FueledStove</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+
+	<ResearchProjectDef>
+		<defName>Ferny_FineBakes</defName>
+		<label>fine bakes</label>
+		<description>text.todo</description>
+		<baseCost>500</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>Ferny_FineMeals</li>
+			<li>Ferny_Bakes</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_LavishBakes</defName>
+		<label>lavish bakes</label>
+		<description>text.todo</description>
+		<baseCost>800</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>Ferny_LavishMeals</li>
+			<li>Ferny_FineBakes</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_GourmetBakes</defName>
+		<label>gourmet bakes</label>
+		<description>text.todo</description>
+		<baseCost>1000</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>Ferny_GourmetMeals</li>
+			<li>Ferny_LavishBakes</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+
+
+
+
+
+
+</Defs>

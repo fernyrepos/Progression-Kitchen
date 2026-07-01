@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+
+<!-- HOT SAUCE!!! -->
+
+
+
+<!-- research -->
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>Defs/RecipeDef[defName="VCE_HotSauce"]/researchPrerequisite</xpath>
+        <value>
+            <researchPrerequisite>Ferny_HotSauce</researchPrerequisite>
+        </value>
+    </Operation>
+
+<!-- OLD: A potent, spicy sauce made from blending and simmering chilis and other spices. While particularly strong hot sauces hurt at first, they are known to numb pain and work up a warm sweat shortly after consumption. -->
+
+  <Operation Class="PatchOperationReplace">
+      <success>Always</success>
+      <xpath>Defs/ThingDef[defName="VCE_HotSauce"]/description</xpath>
+      <value>
+		<description>A potent, spicy sauce made from blending and simmering chilis and other spices. Applying the sauce to a gourmet meal grants it a pain-resistance effect.</description>
+      </value>
+  </Operation>
+
+
+
+
+
+
+
+<!-- KETCHUP!! -->
+
+
+<!-- OLD: A thick sauce made from stewing tomatoes, both salty and tangy in tandem with a sweet aftertaste. Perfect for meaty meals or fried foods. -->
+
+  <Operation Class="PatchOperationReplace">
+      <success>Always</success>
+      <xpath>Defs/ThingDef[defName="VCE_Ketchup"]/description</xpath>
+      <value>
+		<description>A thick sauce made from stewing tomatoes. Applying the sauce to a gourmet meal grants it a mood-boosting effect.</description>
+      </value>
+  </Operation>
+
+
+
+
+
+
+</Patch>

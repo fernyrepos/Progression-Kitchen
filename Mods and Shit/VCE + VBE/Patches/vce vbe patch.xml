@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+
+
+<!-- Go juice stock -->
+
+
+
+<!-- research -->
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>Defs/RecipeDef[defName="VBE_MakeGoJuiceStock"]/researchPrerequisite</xpath>
+        <value>
+            <researchPrerequisite>Ferny_GoJuiceStock</researchPrerequisite>
+        </value>
+    </Operation>
+
+<!-- OLD: A gelatinized cube of Go-Juice, able to be digested rather than injected. While it can be used in any meal, it is often melted into soups or used as a thickening agent in cocktails. Provides a very diluted version of the drug without risk of addictions. -->
+
+  <Operation Class="PatchOperationReplace">
+      <success>Always</success>
+      <xpath>Defs/ThingDef[defName="VBE_GoJuiceStock"]/description</xpath>
+      <value>
+		<description>A gelatinized cube of Go-Juice, able to be digested rather than injected. When applied to a gourmet meal, it provides a very diluted version of the drug without risk of addictions.</description>
+      </value>
+  </Operation>
+
+
+
+
+
+
+
+<!-- Luciferium powder -->
+
+<!-- research -->
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>Defs/RecipeDef[defName="VBE_MakeLuciferiumPowder"]/researchPrerequisite</xpath>
+        <value>
+            <researchPrerequisite>Ferny_LuciferiumPowder</researchPrerequisite>
+        </value>
+    </Operation>
+
+
+<!-- OLD: A very finely blended powder made from luciferium. Usually put around rims of alcoholic drinks in bars frequented by the wealthy and powerful. Provides a very diluted version of the drug without risk of addictions. -->
+
+  <Operation Class="PatchOperationReplace">
+      <success>Always</success>
+      <xpath>Defs/ThingDef[defName="VBE_LuciferiumPowder"]/description</xpath>
+      <value>
+		<description>A very finely blended powder made from luciferium. When applied to a gourmet meal, it provides a very diluted version of the drug without risk of addictions.</description>
+      </value>
+  </Operation>
+
+
+
+
+
+
+
+
+
+
+<!-- Wake-up powder -->
+
+<!-- research -->
+    <Operation Class="PatchOperationReplace">
+        <success>Always</success>
+        <xpath>Defs/RecipeDef[defName="VBE_MakeWakeUpPowder"]/researchPrerequisite</xpath>
+        <value>
+            <researchPrerequisite>Ferny_WakeUpPowder</researchPrerequisite>
+        </value>
+    </Operation>
+
+
+<!-- OLD: A crushed and powdered form of wake-up, surprisingly sweet and sometimes used as a replacement for sugar in desserts or dissolved into a morning espresso. Provides a very diluted version of the drug without risk of addictions. -->
+
+  <Operation Class="PatchOperationReplace">
+      <success>Always</success>
+      <xpath>Defs/ThingDef[defName="VBE_WakeUpPowder"]/description</xpath>
+      <value>
+		<description>A crushed and powdered form of wake-up. When applied to a gourmet meal, it provides a very diluted version of the drug without risk of addictions.</description>
+      </value>
+  </Operation>
+
+
+
+
+
+
+
+
+
+</Patch>

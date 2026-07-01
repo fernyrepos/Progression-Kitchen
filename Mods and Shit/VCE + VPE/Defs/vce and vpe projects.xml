@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>Ferny_HotSauce</defName>
+		<label>hot sauce</label>
+		<description>Learn the process of turning peppers into spicy, pain-resistance boosting hot sauce for use as a condiment.</description>
+		<baseCost>80</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>15.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>VCE_CondimentsResearch</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+</Defs>
