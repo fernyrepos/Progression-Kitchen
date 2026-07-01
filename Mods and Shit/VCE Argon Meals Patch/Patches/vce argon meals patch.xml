@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/RecipeDef[defName="VCE_CookBakeFine_Veg"]/researchPrerequisite</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/RecipeDef[defName="VCE_CookBakeFine_Veg"]/researchPrerequisite</xpath>
+      <value>
+        <researchPrerequisite>Ferny_FineBakes</researchPrerequisite>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/RecipeDef[defName="VCE_CookBakeFine_Veg"]</xpath>
+      <value>
+        <researchPrerequisite>Ferny_FineBakes</researchPrerequisite>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/RecipeDef[defName="VCE_CookBakeFine_Veg_bulk"]/researchPrerequisite</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/RecipeDef[defName="VCE_CookBakeFine_Veg_bulk"]/researchPrerequisite</xpath>
+      <value>
+        <researchPrerequisite>Ferny_FineBakes</researchPrerequisite>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/RecipeDef[defName="VCE_CookBakeFine_Veg_bulk"]</xpath>
+      <value>
+        <researchPrerequisite>Ferny_FineBakes</researchPrerequisite>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/RecipeDef[defName="VCE_CookBakeLavish_Veg"]/researchPrerequisite</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/RecipeDef[defName="VCE_CookBakeLavish_Veg"]/researchPrerequisite</xpath>
+      <value>
+        <researchPrerequisite>Ferny_LavishBakes</researchPrerequisite>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/RecipeDef[defName="VCE_CookBakeLavish_Veg"]</xpath>
+      <value>
+        <researchPrerequisite>Ferny_LavishBakes</researchPrerequisite>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/RecipeDef[defName="VCE_CookBakeLavish_Veg_bulk"]/researchPrerequisite</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/RecipeDef[defName="VCE_CookBakeLavish_Veg_bulk"]/researchPrerequisite</xpath>
+      <value>
+        <researchPrerequisite>Ferny_LavishBakes</researchPrerequisite>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/RecipeDef[defName="VCE_CookBakeLavish_Veg_bulk"]</xpath>
+      <value>
+        <researchPrerequisite>Ferny_LavishBakes</researchPrerequisite>
+      </value>
+    </nomatch>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/RecipeDef[defName="VCE_CookBakeGourmet_Veg"]/researchPrerequisite</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/RecipeDef[defName="VCE_CookBakeGourmet_Veg"]/researchPrerequisite</xpath>
+      <value>
+        <researchPrerequisite>Ferny_GourmetBakes</researchPrerequisite>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/RecipeDef[defName="VCE_CookBakeGourmet_Veg"]</xpath>
+      <value>
+        <researchPrerequisite>Ferny_GourmetBakes</researchPrerequisite>
+      </value>
+    </nomatch>
+  </Operation>
+  
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/RecipeDef[defName="VCE_CookMealGourmet_Veg"]/researchPrerequisite</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/RecipeDef[defName="VCE_CookMealGourmet_Veg"]/researchPrerequisite</xpath>
+      <value>
+        <researchPrerequisite>Ferny_GourmetMeals</researchPrerequisite>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/RecipeDef[defName="VCE_CookMealGourmet_Veg"]</xpath>
+      <value>
+        <researchPrerequisite>Ferny_GourmetMeals</researchPrerequisite>
+      </value>
+    </nomatch>
+  </Operation>
+  
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/RecipeDef[defName="VCE_CookMealGourmet_Carn"]/researchPrerequisite</xpath>
+    <match Class="PatchOperationReplace">
+      <xpath>Defs/RecipeDef[defName="VCE_CookMealGourmet_Carn"]/researchPrerequisite</xpath>
+      <value>
+        <researchPrerequisite>Ferny_GourmetMeals</researchPrerequisite>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/RecipeDef[defName="VCE_CookMealGourmet_Carn"]</xpath>
+      <value>
+        <researchPrerequisite>Ferny_GourmetMeals</researchPrerequisite>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

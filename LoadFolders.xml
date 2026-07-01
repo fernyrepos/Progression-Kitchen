@@ -19,5 +19,6 @@
     <li IfModActive="vanillaexpanded.vplantsemore">Mods and Shit/VPE More Plants</li>
     <li IfModActiveAll="vanillaexpanded.vcooke,VanillaExpanded.VPlantsE">Mods and Shit/VCE + VPE</li>
     <li IfModActiveAll="vanillaexpanded.vcooke,vanillaexpanded.vbrewe">Mods and Shit/VCE + VBE</li>
+    <li IfModActiveAll="argon.vcemp">Mods and Shit/VCE Argon Meals Patch</li>
   </v1.5>
 </loadFolders>
