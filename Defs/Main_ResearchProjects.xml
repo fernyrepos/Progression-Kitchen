@@ -32,7 +32,25 @@
 			<li>ClassicStart</li>
 		</tags>
 		<prerequisites>
+			<li>Ferny_SimpleMeals</li>
 			<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Lumber</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_SimpleMeals</defName>
+		<label>Simple meals</label>
+		<description>Learn to prepare basic meals that will satiate your colonists.</description>
+		<baseCost>200</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>3.00</researchViewY>
+		<tags>
+			<li>ClassicStart</li>
+		</tags>
+		<prerequisites>
+			<li MayRequire="oskarpotocki.vfe.tribals">VFET_Fire</li>
 		</prerequisites>
 	</ResearchProjectDef>
 

@@ -10,7 +10,7 @@
                     <success>Always</success>
                     <xpath>Defs/ResearchProjectDef[defName="Brewing"]/label</xpath>
                     <value>
-                        <label>Brewing basics</label>
+                        <label>Brewing</label>
                     </value>
                 </Operation>
 
@@ -55,6 +55,21 @@
                       </researchPrerequisites> 
                     </value>
                   </nomatch>
+                </Operation>
+
+
+                <Operation Class="PatchOperationAdd">
+                  <xpath>/Defs/RecipeDef[defName="CookMealSimple"]</xpath>
+                  <value>
+                    <researchPrerequisite>Ferny_SimpleMeals</researchPrerequisite>
+                  </value>
+                </Operation>
+
+                <Operation Class="PatchOperationAdd">
+                  <xpath>/Defs/RecipeDef[defName="CookMealSimpleBulk"]</xpath>
+                  <value>
+                    <researchPrerequisite>Ferny_SimpleMeals</researchPrerequisite>
+                  </value>
                 </Operation>
 
                 <Operation Class="PatchOperationConditional">
