@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Split House Roxmont roxberry stout out of Brewing -->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="DankPyon_Make_Wort_RoxberryStout"]/researchPrerequisites</xpath>
+        <value>
+          <researchPrerequisites>
+            <li>Ferny_RoxberryStout</li>
+          </researchPrerequisites>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DankPyon_RoxberryStout"]/researchPrerequisites</xpath>
+        <value>
+          <researchPrerequisites>
+            <li>Ferny_RoxberryStout</li>
+          </researchPrerequisites>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+
+</Patch>

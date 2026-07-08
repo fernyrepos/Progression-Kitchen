@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>Ferny_PackagedRations</defName>
+		<label>Packaged rations</label>
+		<description>Learn to prepare and package rations for long-term storage.</description>
+		<baseCost>700</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>4.00</researchViewY>
+		<prerequisites>
+			<li>Pemmican</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_AleBrewing</defName>
+		<label>Ale</label>
+		<description>Learn to prepare ale wort and ferment it into drinkable ale.</description>
+		<baseCost>200</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>4.00</researchViewY>
+		<prerequisites>
+			<li>Brewing</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_CiderBrewing</defName>
+		<label>Cider</label>
+		<description>Learn to ferment apple juice into cider.</description>
+		<baseCost>200</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>4.50</researchViewY>
+		<prerequisites>
+			<li>Brewing</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_GriffonBerryWine</defName>
+		<label>Griffon berry wine</label>
+		<description>Learn to crush griffon berries into must and ferment them into wine.</description>
+		<baseCost>200</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>5.00</researchViewY>
+		<prerequisites>
+			<li>Brewing</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_MeadBrewing</defName>
+		<label>Mead</label>
+		<description>Learn to ferment honey into mead.</description>
+		<baseCost>200</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>5.50</researchViewY>
+		<prerequisites>
+			<li>Brewing</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_MulberryWine</defName>
+		<label>Mulberry wine</label>
+		<description>Learn to crush mulberries into must and ferment them into wine.</description>
+		<baseCost>200</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>6.00</researchViewY>
+		<prerequisites>
+			<li>Brewing</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+</Defs>

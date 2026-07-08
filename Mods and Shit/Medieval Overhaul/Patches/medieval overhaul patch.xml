@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+
+
+<!-- July 4 2026 -->
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ResearchProjectDef[defName="Pemmican"]/label</xpath>
+		<value>
+				<label>Pemmican</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_CookMealRations"]/researchPrerequisite</xpath>
+		<value>
+				<researchPrerequisite>Ferny_PackagedRations</researchPrerequisite>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_CookMealRationsBulk"]/researchPrerequisite</xpath>
+		<value>
+				<researchPrerequisite>Ferny_PackagedRations</researchPrerequisite>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_CookMealRationsVegan"]/researchPrerequisite</xpath>
+		<value>
+				<researchPrerequisite>Ferny_PackagedRations</researchPrerequisite>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_CookMealRationsVeganBulk"]/researchPrerequisite</xpath>
+		<value>
+				<researchPrerequisite>Ferny_PackagedRations</researchPrerequisite>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName="DankPyon_CookMealRationsVeganBulkier"]/researchPrerequisite</xpath>
+		<value>
+				<researchPrerequisite>Ferny_PackagedRations</researchPrerequisite>
+		</value>
+	</Operation>
+
+
+
   <!-- Smoker no rustic furn please! -->
   <Operation Class="PatchOperationReplace">
     <success>Always</success>
@@ -467,6 +515,88 @@
     </match>
   </Operation>
 
+
+
+
+
+  <!-- Split Medieval Overhaul drinks out of Brewing -->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="DankPyon_Make_WortAle"]/researchPrerequisites</xpath>
+        <value>
+          <researchPrerequisites>
+            <li>Ferny_AleBrewing</li>
+          </researchPrerequisites>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DankPyon_Ale"]/researchPrerequisites</xpath>
+        <value>
+          <researchPrerequisites>
+            <li>Ferny_AleBrewing</li>
+          </researchPrerequisites>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="DankPyon_Make_JuiceAppleUnfermented"]/researchPrerequisites</xpath>
+        <value>
+          <researchPrerequisites>
+            <li>Ferny_CiderBrewing</li>
+          </researchPrerequisites>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DankPyon_Cider"]/researchPrerequisites</xpath>
+        <value>
+          <researchPrerequisites>
+            <li>Ferny_CiderBrewing</li>
+          </researchPrerequisites>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DankPyon_Mead"]/researchPrerequisites</xpath>
+        <value>
+          <researchPrerequisites>
+            <li>Ferny_MeadBrewing</li>
+          </researchPrerequisites>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="DankPyon_MakeMustMulberry"]/researchPrerequisites</xpath>
+        <value>
+          <researchPrerequisites>
+            <li>Ferny_MulberryWine</li>
+          </researchPrerequisites>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DankPyon_Wine_Mulberry" or defName="DankPyon_MustWine_Mulberry"]</xpath>
+        <value>
+          <researchPrerequisites Inherit="False">
+            <li>Ferny_MulberryWine</li>
+          </researchPrerequisites>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="DankPyon_MakeMustGriffon"]/researchPrerequisites</xpath>
+        <value>
+          <researchPrerequisites>
+            <li>Ferny_GriffonBerryWine</li>
+          </researchPrerequisites>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="DankPyon_Wine_Griffon" or defName="DankPyon_MustWine_Griffon"]</xpath>
+        <value>
+          <researchPrerequisites Inherit="False">
+            <li>Ferny_GriffonBerryWine</li>
+          </researchPrerequisites>
+        </value>
+      </li>
+    </operations>
+  </Operation>
 
 
 

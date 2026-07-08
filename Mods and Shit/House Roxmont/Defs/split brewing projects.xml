@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>Ferny_RoxberryStout</defName>
+		<label>Roxberry stout</label>
+		<description>Learn to prepare roxberry stout wort and ferment it into stout.</description>
+		<baseCost>200</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>7.00</researchViewY>
+		<prerequisites>
+			<li>Brewing</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+</Defs>

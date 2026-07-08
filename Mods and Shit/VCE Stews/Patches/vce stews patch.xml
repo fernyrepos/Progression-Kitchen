@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
+  <Operation Class="PatchOperationAdd">
+    <success>Always</success>
+    <xpath>Defs/ResearchProjectDef[defName="VCE_StewCooking"]/prerequisites</xpath>
+    <value>
+    <prerequisites>
+      <li>Ferny_FueledStove</li>
+    </prerequisites>
+    </value>
+  </Operation>
+
 </Patch>

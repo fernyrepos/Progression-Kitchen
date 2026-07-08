@@ -1,4 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
+  <!-- Split Keshig gorewine out of Brewing -->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/RecipeDef[defName="DV_MakeGoreMust"]/researchPrerequisite</xpath>
+        <value>
+          <researchPrerequisite>Ferny_GorewineBrewing</researchPrerequisite>
+        </value>
+      </li>
+      <li Class="PatchOperationReplace">
+        <xpath>Defs/ThingDef[defName="DV_BloodwineBarrel"]/researchPrerequisites</xpath>
+        <value>
+          <researchPrerequisites>
+            <li>Ferny_GorewineBrewing</li>
+          </researchPrerequisites>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+
 </Patch>

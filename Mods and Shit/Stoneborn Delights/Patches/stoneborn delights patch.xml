@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
+  <!-- Dwarven fermentation follows Brewing progression -->
+  <Operation Class="PatchOperationReplace">
+    <success>Always</success>
+    <xpath>Defs/ResearchProjectDef[defName="SD_DwarvenBrewing"]/prerequisites</xpath>
+    <value>
+    <prerequisites>
+      <li>Brewing</li>
+    </prerequisites>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <success>Always</success>
+    <xpath>Defs/ResearchProjectDef[defName="SD_DwarvenBrewing"]/label</xpath>
+    <value>
+      <label>Dwarven cask</label>
+    </value>
+  </Operation>
+
 </Patch>
