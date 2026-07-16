@@ -85,4 +85,33 @@
 		</prerequisites>
 	</ResearchProjectDef>
 
+
+	<ResearchProjectDef>
+		<defName>Ferny_FlourMilling</defName>
+		<label>Flour</label>
+		<description>Learn to grind wheat into flour.</description>
+		<baseCost>150</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>6.50</researchViewY>
+		<prerequisites>
+			<li MayRequire="OskarPotocki.VFE.Tribals">VFET_Agriculture</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>Ferny_SugarMilling</defName>
+		<label>Sugar</label>
+		<description>Learn to grind sugarcane into sugar.</description>
+		<baseCost>150</baseCost>
+		<tab>Main</tab>
+		<techLevel>Neolithic</techLevel>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>7.00</researchViewY>
+		<prerequisites>
+			<li MayRequire="OskarPotocki.VFE.Tribals">VFET_Agriculture</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
 </Defs>

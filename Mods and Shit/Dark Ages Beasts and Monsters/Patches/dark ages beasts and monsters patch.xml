@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Split Dark Ages karhan out of Brewing -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RecipeDef[defName="DA_Make_Karhan"]</xpath>
+    <value>
+      <researchPrerequisite>Ferny_KarhanBrewing</researchPrerequisite>
+    </value>
+  </Operation>
+
+</Patch>

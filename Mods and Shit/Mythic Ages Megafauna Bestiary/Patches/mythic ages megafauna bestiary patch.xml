@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/ThingDef[defName="FueledStove"]</xpath>
+    <value>
+      <li Class="VEF.Buildings.RecipeInheritanceExtension">
+        <inheritRecipesFrom>
+          <li>MA_FlatCookingTable</li>
+        </inheritRecipesFrom>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>/Defs/ThingDef[defName="ElectricStove"]</xpath>
+    <value>
+      <li Class="VEF.Buildings.RecipeInheritanceExtension">
+        <inheritRecipesFrom>
+          <li>MA_FlatCookingTable</li>
+        </inheritRecipesFrom>
+      </li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="MA_FlatButcherBlock"]/label</xpath>
+    <value>
+      <label>butcher block</label>
+    </value>
+  </Operation>
+
+</Patch>

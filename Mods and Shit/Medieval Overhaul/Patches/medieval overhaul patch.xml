@@ -1027,4 +1027,49 @@
   </Operation>
 
 
+
+
+  <!-- Split Medieval Overhaul flour and sugar out of agriculture -->
+  <Operation Class="PatchOperationSequence">
+    <success>Always</success>
+    <operations>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour_Manual"]</xpath>
+        <value>
+          <researchPrerequisite>Ferny_FlourMilling</researchPrerequisite>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/RecipeDef[defName="DankPyon_CraftFlour"]</xpath>
+        <value>
+          <researchPrerequisite>Ferny_FlourMilling</researchPrerequisite>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/RecipeDef[defName="DankPyon_CraftFlourBulk"]</xpath>
+        <value>
+          <researchPrerequisite>Ferny_FlourMilling</researchPrerequisite>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/RecipeDef[defName="DankPyon_CraftSugar_Manual"]</xpath>
+        <value>
+          <researchPrerequisite>Ferny_SugarMilling</researchPrerequisite>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/RecipeDef[defName="DankPyon_CraftSugar"]</xpath>
+        <value>
+          <researchPrerequisite>Ferny_SugarMilling</researchPrerequisite>
+        </value>
+      </li>
+      <li Class="PatchOperationAdd">
+        <xpath>Defs/RecipeDef[defName="DankPyon_CraftSugarBulk"]</xpath>
+        <value>
+          <researchPrerequisite>Ferny_SugarMilling</researchPrerequisite>
+        </value>
+      </li>
+    </operations>
+  </Operation>
+
 </Patch>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Baby food research -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RecipeDef[defName="Make_BabyFood"]</xpath>
+    <value>
+      <researchPrerequisite>Ferny_BabyFood</researchPrerequisite>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RecipeDef[defName="Make_BabyFoodBulk"]</xpath>
+    <value>
+      <researchPrerequisite>Ferny_BabyFood</researchPrerequisite>
+    </value>
+  </Operation>
+
+</Patch>

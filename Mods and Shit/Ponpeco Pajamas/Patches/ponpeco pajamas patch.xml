@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Ferny nerf PON Hot Milk -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="PonHotMilk"]/description</xpath>
+    <value>
+      <description>A warm cup of milk that soothes the body and mind, warming you from within and helping resist the cold.\nIt brings a small sense of comfort before sleep, being non-addictive and satisfying binge-eating urges.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="PonHotMilk"]/ingestible/outcomeDoers/li[@Class="IngestionOutcomeDoer_GiveHediff" and hediffDef="heddif_PONHotMilkEffect"]/severity</xpath>
+    <value>
+      <severity>0.5</severity>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="heddif_PONHotMilkEffect"]/stages/li/statOffsets/RestRateMultiplier</xpath>
+    <value>
+      <RestRateMultiplier>0.08</RestRateMultiplier>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="heddif_PONHotMilkEffect"]/stages/li/statOffsets/ImmunityGainSpeed</xpath>
+    <value>
+      <ImmunityGainSpeed>0.05</ImmunityGainSpeed>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="heddif_PONHotMilkEffect"]/stages/li/statOffsets/ComfyTemperatureMin</xpath>
+    <value>
+      <ComfyTemperatureMin>-4</ComfyTemperatureMin>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThoughtDef[defName="Thought_PONHotMilkEffect"]/stages/li/description</xpath>
+    <value>
+      <description>Hot milk leaves me feeling warm and cozy.</description>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThoughtDef[defName="Thought_PONHotMilkEffect"]/stages/li/baseMoodEffect</xpath>
+    <value>
+      <baseMoodEffect>2</baseMoodEffect>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationRemove">
+    <xpath>Defs/ThoughtDef[defName="SleepDisturbed"]/nullifyingHediffs/li[.="heddif_PONHotMilkEffect"]</xpath>
+  </Operation>
+
+</Patch>
