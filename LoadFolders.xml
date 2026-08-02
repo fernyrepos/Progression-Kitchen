@@ -16,7 +16,6 @@
     <li IfModActive="det.keshig">Mods and Shit/Keshig</li>
     <li IfModActive="Van.Beasts">Mods and Shit/Dark Ages Beasts and Monsters</li>
     <li IfModActive="veterano.mythicages.megafaunabestiary">Mods and Shit/Mythic Ages Megafauna Bestiary</li>
-    <li IfModActiveAll="veterano.mythicages.megafaunabestiary,dankpyon.medieval.overhaul">Mods and Shit/Mythic Ages Megafauna Bestiary + Medieval Overhaul</li>
     <li IfModActive="sarg.alphacrafts">Mods and Shit/Alpha Crafts</li>
     <li IfModActive="OskarPotocki.VFE.Medieval2">Mods and Shit/VFE Medieval 2</li>
     <li IfModActive="vanillaexpanded.vbrewecandt">Mods and Shit/VBE CAT</li>

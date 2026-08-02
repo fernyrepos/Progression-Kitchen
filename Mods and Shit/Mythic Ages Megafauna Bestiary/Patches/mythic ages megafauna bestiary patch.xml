@@ -23,10 +23,52 @@
     </value>
   </Operation>
 
-  <Operation Class="PatchOperationReplace">
+  <!-- <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ThingDef[defName="MA_FlatButcherBlock"]/label</xpath>
     <value>
       <label>butcher block</label>
+    </value>
+  </Operation> -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RecipeDef[defName="MA_Make_Duskyakult"]</xpath>
+    <value>
+      <researchPrerequisite>Ferny_DuskyakultBrewing</researchPrerequisite>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RecipeDef[defName="MA_Make_Caprodka"]</xpath>
+    <value>
+      <researchPrerequisite>Ferny_CaprodkaBrewing</researchPrerequisite>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/RecipeDef[defName="MA_Make_MegaBacon_x1"]/label</xpath>
+    <value>
+      <label>prepare mega bacon</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/RecipeDef[defName="MA_Make_MegaBacon_x4"]/label</xpath>
+    <value>
+      <label>prepare mega bacon x4</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/RecipeDef[defName="MA_Make_MegaBeef_x1"]/label</xpath>
+    <value>
+      <label>prepare mega beef</label>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/RecipeDef[defName="MA_Make_MegaBeef_x4"]/label</xpath>
+    <value>
+      <label>prepare mega beef x4</label>
     </value>
   </Operation>
 

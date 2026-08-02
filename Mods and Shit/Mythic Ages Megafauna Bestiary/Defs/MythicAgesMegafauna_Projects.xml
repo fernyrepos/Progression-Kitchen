@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>Ferny_DuskyakultBrewing</defName>
+    <label>Duskyakult</label>
+    <description>Learn to ferment duskhorn milk into bottled duskyakult.</description>
+    <baseCost>200</baseCost>
+    <tab>Main</tab>
+    <techLevel>Neolithic</techLevel>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>7.50</researchViewY>
+    <prerequisites>
+      <li>Brewing</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>Ferny_CaprodkaBrewing</defName>
+    <label>Caprodka</label>
+    <description>Learn to ferment capryak milk into strong bottled Caprodka.</description>
+    <baseCost>200</baseCost>
+    <tab>Main</tab>
+    <techLevel>Neolithic</techLevel>
+    <researchViewX>4.00</researchViewX>
+    <researchViewY>8.00</researchViewY>
+    <prerequisites>
+      <li>Brewing</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+</Defs>
