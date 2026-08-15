@@ -15,7 +15,7 @@
 			<li>ClassicStart</li>
 		</tags>
 		<prerequisites>
-			<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Lumber</li>
+			<li MayRequire="ferny.progressionfurniture">Ferny_Tables</li>
 		</prerequisites>
 	</ResearchProjectDef>
 
@@ -33,7 +33,7 @@
 		</tags>
 		<prerequisites>
 			<li>Ferny_SimpleMeals</li>
-			<li MayRequire="dankpyon.medieval.overhaul">DankPyon_Lumber</li>
+			<li MayRequire="ferny.progressionfurniture">Ferny_Tables</li>
 		</prerequisites>
 	</ResearchProjectDef>
 
