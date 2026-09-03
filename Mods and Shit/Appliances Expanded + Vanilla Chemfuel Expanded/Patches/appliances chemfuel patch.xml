@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/ThingDef[defName="CE_ChemfuelStove"]/researchPrerequisites</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="CE_ChemfuelStove"]/researchPrerequisites</xpath>
+      <value>
+        <li>Ferny_ChemfuelStove</li>
+      </value>
+    </match>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>/Defs/ThingDef[defName="CE_ChemfuelStove"]</xpath>
+      <value>
+        <researchPrerequisites>
+          <li>Ferny_ChemfuelStove</li>
+        </researchPrerequisites>
+      </value>
+    </nomatch>
+  </Operation>
+
+</Patch>

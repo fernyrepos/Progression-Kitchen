@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ResearchProjectDef>
+    <defName>Ferny_ElectricCheesePress</defName>
+    <label>Electric cheese press</label>
+    <description>Adapt cheese pressing to an industrial electric press.</description>
+    <baseCost>600</baseCost>
+    <tab>Main</tab>
+    <techLevel>Industrial</techLevel>
+    <researchViewX>5.00</researchViewX>
+    <researchViewY>4.00</researchViewY>
+    <prerequisites>
+      <li>DankPyon_Presser</li>
+      <li>Electricity</li>
+    </prerequisites>
+  </ResearchProjectDef>
+
+</Defs>

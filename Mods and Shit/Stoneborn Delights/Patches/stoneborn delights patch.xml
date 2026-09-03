@@ -20,4 +20,12 @@
     </value>
   </Operation>
 
+  <Operation Class="PatchOperationReplace">
+    <success>Always</success>
+    <xpath>Defs/ResearchProjectDef[defName="SD_DwarvenBrewing"]/baseCost</xpath>
+    <value>
+      <baseCost>350</baseCost>
+    </value>
+  </Operation>
+
 </Patch>

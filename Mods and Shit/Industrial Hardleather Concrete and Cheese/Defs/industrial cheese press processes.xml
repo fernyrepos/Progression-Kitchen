@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
+    <defName>Ferny_Talias_PressCheeseProcess_Electric</defName>
+    <thingDef>DankPyon_MealCheese</thingDef>
+    <processDays>0.75</processDays>
+    <filledGraphicSuffix>Full</filledGraphicSuffix>
+    <ingredientFilter>
+      <categories>
+        <li>DankPyon_Milk</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>DankPyon_GoatMilk</li>
+        <li>DankPyon_SheepMilk</li>
+      </disallowedThingDefs>
+    </ingredientFilter>
+  </ProcessorFramework.ProcessDef>
+
+  <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
+    <defName>Ferny_Talias_PressGoatCheeseProcess_Electric</defName>
+    <thingDef>DankPyon_MealGoatCheese</thingDef>
+    <processDays>0.75</processDays>
+    <filledGraphicSuffix>Full</filledGraphicSuffix>
+    <ingredientFilter>
+      <thingDefs>
+        <li>DankPyon_GoatMilk</li>
+      </thingDefs>
+    </ingredientFilter>
+  </ProcessorFramework.ProcessDef>
+
+  <ProcessorFramework.ProcessDef ParentName="DankPyon_CheesePressBase">
+    <defName>Ferny_Talias_PressSheepCheeseProcess_Electric</defName>
+    <thingDef>DankPyon_MealSheepCheese</thingDef>
+    <processDays>0.75</processDays>
+    <filledGraphicSuffix>Full</filledGraphicSuffix>
+    <ingredientFilter>
+      <thingDefs>
+        <li>DankPyon_SheepMilk</li>
+      </thingDefs>
+    </ingredientFilter>
+  </ProcessorFramework.ProcessDef>
+
+  <ProcessorFramework.ProcessDef>
+    <defName>Ferny_Talias_PressAppleProcess_Electric</defName>
+    <thingDef>DankPyon_JuiceApple</thingDef>
+    <ingredientFilter>
+      <thingDefs>
+        <li>DankPyon_MincedApple</li>
+      </thingDefs>
+    </ingredientFilter>
+    <processDays>0.75</processDays>
+    <capacityFactor>1.0</capacityFactor>
+    <efficiency>1.0</efficiency>
+    <usesTemperature>true</usesTemperature>
+    <temperatureSafe>-99.0~99.0</temperatureSafe>
+    <temperatureIdeal>21.0~99.0</temperatureIdeal>
+    <ruinedPerDegreePerHour>2.5</ruinedPerDegreePerHour>
+    <speedBelowSafe>0.1</speedBelowSafe>
+    <speedAboveSafe>1.0</speedAboveSafe>
+    <sunFactor>1.0~1.0</sunFactor>
+    <rainFactor>1.0~1.0</rainFactor>
+    <snowFactor>1.0~1.0</snowFactor>
+    <windFactor>1.0~1.0</windFactor>
+    <unpoweredFactor>0.0</unpoweredFactor>
+    <unfueledFactor>0.0</unfueledFactor>
+    <powerUseFactor>1.0</powerUseFactor>
+    <fuelUseFactor>0.0</fuelUseFactor>
+    <filledGraphicSuffix>Full</filledGraphicSuffix>
+    <usesQuality>false</usesQuality>
+    <qualityDays>(1, 2, 3, 4, 5, 6, 7)</qualityDays>
+    <color>(255, 255, 255)</color>
+    <customLabel/>
+    <destroyChance>0.0</destroyChance>
+  </ProcessorFramework.ProcessDef>
+
+
+  <ProcessorFramework.ProcessDef MayRequire="DankPyon.Medieval.Overhaul.House.Roxmont" ParentName="DankPyon_CheesePressBase">
+    <defName>Ferny_Talias_PressRoxwoodCheeseProcess_Electric</defName>
+    <thingDef>DankPyon_MealRoxwoodCheese</thingDef>
+    <processDays>0.75</processDays>
+    <filledGraphicSuffix>Full</filledGraphicSuffix>
+    <ingredientFilter>
+      <thingDefs>
+        <li>DankPyon_RoxMilk</li>
+      </thingDefs>
+    </ingredientFilter>
+  </ProcessorFramework.ProcessDef>
+
+  <ProcessorFramework.ProcessDef MayRequire="Van.Beasts" ParentName="DankPyon_CheesePressBase">
+    <defName>Ferny_Talias_PressGoldfortCheeseProcess_Electric</defName>
+    <thingDef>DA_MealGoldfortCheese</thingDef>
+    <processDays>0.75</processDays>
+    <filledGraphicSuffix>Full</filledGraphicSuffix>
+    <ingredientFilter>
+      <thingDefs>
+        <li>DA_RegalMilk</li>
+      </thingDefs>
+    </ingredientFilter>
+  </ProcessorFramework.ProcessDef>
+
+  <ProcessorFramework.ProcessDef MayRequire="Van.Beasts" ParentName="DankPyon_CheesePressBase">
+    <defName>Ferny_Talias_PressMufftonCheeseProcess_Electric</defName>
+    <thingDef>DA_MealMufftonCheese</thingDef>
+    <processDays>0.75</processDays>
+    <filledGraphicSuffix>Full</filledGraphicSuffix>
+    <ingredientFilter>
+      <thingDefs>
+        <li>DA_MufftonMilk</li>
+      </thingDefs>
+    </ingredientFilter>
+  </ProcessorFramework.ProcessDef>
+
+  <ProcessorFramework.ProcessDef MayRequire="veterano.mythicages.megafaunabestiary" ParentName="DankPyon_CheesePressBase">
+    <defName>Ferny_Talias_PressCapryakCheeseProcess_Electric</defName>
+    <thingDef>MA_CapryakCheese</thingDef>
+    <processDays>0.75</processDays>
+    <filledGraphicSuffix>Full</filledGraphicSuffix>
+    <ingredientFilter>
+      <thingDefs>
+        <li>MA_CapryakMilk</li>
+      </thingDefs>
+    </ingredientFilter>
+  </ProcessorFramework.ProcessDef>
+
+  <ProcessorFramework.ProcessDef MayRequire="veterano.mythicages.megafaunabestiary" ParentName="DankPyon_CheesePressBase">
+    <defName>Ferny_Talias_PressDuskhornCheeseProcess_Electric</defName>
+    <thingDef>MA_DuskhornCheese</thingDef>
+    <processDays>0.75</processDays>
+    <filledGraphicSuffix>Full</filledGraphicSuffix>
+    <ingredientFilter>
+      <thingDefs>
+        <li>MA_DuskMilk</li>
+      </thingDefs>
+    </ingredientFilter>
+  </ProcessorFramework.ProcessDef>
+
+  <ProcessorFramework.ProcessDef MayRequire="veterano.mythicages.megafaunabestiary" ParentName="DankPyon_CheesePressBase">
+    <defName>Ferny_Talias_PressAminoxBlueCheeseProcess_Electric</defName>
+    <thingDef>MA_AminoxBlueCheese</thingDef>
+    <processDays>0.75</processDays>
+    <filledGraphicSuffix>Full</filledGraphicSuffix>
+    <ingredientFilter>
+      <thingDefs>
+        <li>MA_AminoMilk</li>
+      </thingDefs>
+    </ingredientFilter>
+  </ProcessorFramework.ProcessDef>
+
+</Defs>

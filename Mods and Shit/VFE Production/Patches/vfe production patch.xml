@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
+	<!-- Electric butcher table -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="VFE_TableButcherElectric"]/label</xpath>
+		<value>
+			<label>electric butcher table</label>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="VFE_TableButcherElectric"]/researchPrerequisites</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="VFE_TableButcherElectric"]/researchPrerequisites</xpath>
+			<value>
+				<researchPrerequisites>
+					<li>Ferny_ElectricButcher</li>
+				</researchPrerequisites>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="VFE_TableButcherElectric"]</xpath>
+			<value>
+				<researchPrerequisites>
+					<li>Ferny_ElectricButcher</li>
+				</researchPrerequisites>
+			</value>
+		</nomatch>
+	</Operation>
+
 </Patch>

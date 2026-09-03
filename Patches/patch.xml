@@ -58,6 +58,28 @@
                 </Operation>
 
 
+<!-- Electric stove research -->
+                <Operation Class="PatchOperationConditional">
+                  <xpath>/Defs/ThingDef[defName="ElectricStove"]/researchPrerequisites</xpath>
+                  <match Class="PatchOperationReplace">
+                    <xpath>/Defs/ThingDef[defName="ElectricStove"]/researchPrerequisites</xpath>
+                    <value>
+                      <researchPrerequisites>
+                        <li>Ferny_ElectricStove</li>
+                      </researchPrerequisites> 
+                   </value>
+                  </match>
+                  <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="ElectricStove"]</xpath>
+                    <value>
+                      <researchPrerequisites>
+                        <li>Ferny_ElectricStove</li>
+                      </researchPrerequisites> 
+                    </value>
+                  </nomatch>
+                </Operation>
+
+
                 <Operation Class="PatchOperationAdd">
                   <xpath>/Defs/RecipeDef[defName="CookMealSimple"]</xpath>
                   <value>

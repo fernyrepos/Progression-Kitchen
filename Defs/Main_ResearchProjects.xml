@@ -38,6 +38,21 @@
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
+		<defName>Ferny_ElectricStove</defName>
+		<label>Electric stove</label>
+		<description>Learn to build an electric cooking station for more reliable meal preparation.</description>
+		<baseCost>700</baseCost>
+		<tab>Main</tab>
+		<techLevel>Industrial</techLevel>
+		<researchViewX>5.00</researchViewX>
+		<researchViewY>3.00</researchViewY>
+		<prerequisites>
+			<li>Electricity</li>
+			<li>Ferny_FueledStove</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
 		<defName>Ferny_SimpleMeals</defName>
 		<label>Simple meals</label>
 		<description>Learn to prepare basic meals that will satiate your colonists.</description>

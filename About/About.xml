@@ -28,9 +28,14 @@
 		<li>vanillaexpanded.vbrewe</li>
 		<li>vanillaexpanded.vbrewecandt</li>
 		<li>vanillaexpanded.vcooke</li>
+		<li>scpchemfuel.appliances</li>
+		<li>VanillaExpanded.VChemfuelE</li>
+		<li>ferny.generallymoreresearch</li>
+		<li>talias.VFEHardleatherConcrete</li>
 		<li>argon.vcemp</li>
 		<li>oskarpotocki.vfe.classical</li>
 		<li>vanillaexpanded.vfeproduction</li>
+		<li>vanillaexpanded.helixiengas</li>
 		<li>syrchalis.processor.framework</li>
 		<li>det.keshig</li>
 		<li>ferny.replacelib</li>
@@ -44,5 +49,6 @@
 		<!-- <li>ferny.betterarchitect</li> -->
 		<li>ferny.progressioncore</li>
 		<!-- <li>vanillaexpanded.vplantsemore</li> -->
+		<li>badoaks.meatonastick.expansion</li>
 	</loadAfter>
 </ModMetaData>

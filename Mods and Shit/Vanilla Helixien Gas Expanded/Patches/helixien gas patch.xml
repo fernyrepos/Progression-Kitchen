@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<!-- Gas-powered stove research -->
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/ThingDef[defName="VHGE_GasPoweredStove"]/researchPrerequisites</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/ThingDef[defName="VHGE_GasPoweredStove"]/researchPrerequisites</xpath>
+			<value>
+				<researchPrerequisites>
+					<li>Ferny_GasPoweredStove</li>
+				</researchPrerequisites>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/ThingDef[defName="VHGE_GasPoweredStove"]</xpath>
+			<value>
+				<researchPrerequisites>
+					<li>Ferny_GasPoweredStove</li>
+				</researchPrerequisites>
+			</value>
+		</nomatch>
+	</Operation>
+
+</Patch>

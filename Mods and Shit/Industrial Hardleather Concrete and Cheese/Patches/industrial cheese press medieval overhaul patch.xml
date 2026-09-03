@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Convert the VCE-based electric cheese press to Medieval Overhaul's processor system. -->
+  <Operation Class="PatchOperationSequence">
+    <operations>
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>/Defs/ThingDef[defName="talias_ElectricCheesePress"]/comps/li[@Class="PipeSystem.CompProperties_AdvancedResourceProcessor"]</xpath>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="talias_ElectricCheesePress"]/description</xpath>
+        <value>
+          <description>A powered press that applies steady electric pressure to turn milk into cheese faster than a normal cheese press.</description>
+        </value>
+      </li>
+
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="talias_ElectricCheesePress"]/comps</xpath>
+        <value>
+          <li Class="ProcessorFramework.CompProperties_Processor">
+            <capacity>100</capacity>
+            <independentProcesses>false</independentProcesses>
+            <parallelProcesses>false</parallelProcesses>
+            <dropIngredients>true</dropIngredients>
+            <showProductIcon>true</showProductIcon>
+            <barOffset>(0.0, 0.25)</barOffset>
+            <barScale>(1.0, 1.0)</barScale>
+            <colorCoded>false</colorCoded>
+            <processes>
+              <li>Ferny_Talias_PressCheeseProcess_Electric</li>
+              <li>Ferny_Talias_PressGoatCheeseProcess_Electric</li>
+              <li>Ferny_Talias_PressSheepCheeseProcess_Electric</li>
+              <li>Ferny_Talias_PressAppleProcess_Electric</li>
+              <li MayRequire="DankPyon.Medieval.Overhaul.House.Roxmont">Ferny_Talias_PressRoxwoodCheeseProcess_Electric</li>
+              <li MayRequire="Van.Beasts">Ferny_Talias_PressGoldfortCheeseProcess_Electric</li>
+              <li MayRequire="Van.Beasts">Ferny_Talias_PressMufftonCheeseProcess_Electric</li>
+              <li MayRequire="veterano.mythicages.megafaunabestiary">Ferny_Talias_PressCapryakCheeseProcess_Electric</li>
+              <li MayRequire="veterano.mythicages.megafaunabestiary">Ferny_Talias_PressDuskhornCheeseProcess_Electric</li>
+              <li MayRequire="veterano.mythicages.megafaunabestiary">Ferny_Talias_PressAminoxBlueCheeseProcess_Electric</li>
+            </processes>
+          </li>
+        </value>
+      </li>
+
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>/Defs/ThingDef[defName="talias_ElectricCheesePress"]/inspectorTabs/li[.="PipeSystem.ITab_Processor"]</xpath>
+      </li>
+
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="talias_ElectricCheesePress"][not(thingClass)]</xpath>
+        <value>
+          <thingClass>Building_WorkTable</thingClass>
+        </value>
+      </li>
+
+      <li Class="PatchOperationReplace">
+        <xpath>/Defs/ThingDef[defName="talias_ElectricCheesePress"]/researchPrerequisites</xpath>
+        <value>
+          <researchPrerequisites>
+            <li>Ferny_ElectricCheesePress</li>
+          </researchPrerequisites>
+        </value>
+      </li>
+
+      <li Class="PatchOperationAdd">
+        <xpath>/Defs/ThingDef[defName="talias_ElectricCheesePress"][not(techLevel)]</xpath>
+        <value>
+          <techLevel>Industrial</techLevel>
+        </value>
+      </li>
+
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>/Defs/ThingDef[defName="talias_ElectricCheesePress"]/building/wantsHopperAdjacent</xpath>
+      </li>
+
+      <li Class="PatchOperationRemove">
+        <success>Always</success>
+        <xpath>/Defs/ThingDef[defName="talias_ElectricCheesePress"]/building/isMealSource</xpath>
+      </li>
+    </operations>
+  </Operation>
+
+</Patch>

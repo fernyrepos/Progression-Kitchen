@@ -9,8 +9,11 @@
     <li IfModActive="vanillaexpanded.vcookesushi">Mods and Shit/VCE Sushi</li>
     <li IfModActive="vanillaexpanded.vbrewe">Mods and Shit/VE Brewing</li>
     <li IfModActive="vanillaexpanded.vcooke">Mods and Shit/VE Cooking</li>
+    <li IfModActiveAll="scpchemfuel.appliances,VanillaExpanded.VChemfuelE">Mods and Shit/Appliances Expanded + Vanilla Chemfuel Expanded</li>
+    <li IfModActiveAll="talias.VFEHardleatherConcrete,vanillaexpanded.vcooke,dankpyon.medieval.overhaul">Mods and Shit/Industrial Hardleather Concrete and Cheese</li>
     <li IfModActive="oskarpotocki.vfe.classical">Mods and Shit/VFE Classical</li>
     <li IfModActive="vanillaexpanded.vfeproduction">Mods and Shit/VFE Production</li>
+    <li IfModActive="vanillaexpanded.helixiengas">Mods and Shit/Vanilla Helixien Gas Expanded</li>
     <li IfModActive="syrchalis.processor.framework">Mods and Shit/Processor Framework</li>
     <li IfModActive="DankPyon.Medieval.Overhaul.House.Roxmont">Mods and Shit/House Roxmont</li>
     <li IfModActive="det.keshig">Mods and Shit/Keshig</li>
@@ -25,5 +28,6 @@
     <li IfModActiveAll="vanillaexpanded.vcooke,VanillaExpanded.VPlantsE">Mods and Shit/VCE + VPE</li>
     <li IfModActiveAll="vanillaexpanded.vcooke,vanillaexpanded.vbrewe">Mods and Shit/VCE + VBE</li>
     <li IfModActiveAll="argon.vcemp">Mods and Shit/VCE Argon Meals Patch</li>
+    <li IfModActive="badoaks.meatonastick.expansion">Mods and Shit/Meat On A Stick Expansion</li>
   </v1.5>
 </loadFolders>
