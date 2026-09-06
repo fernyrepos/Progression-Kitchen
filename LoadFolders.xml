@@ -5,6 +5,7 @@
     <li IfModActive="Ludeon.RimWorld.Biotech">Mods and Shit/Biotech</li>
     <li IfModActive="ponpeco.ponpecopajamas">Mods and Shit/Ponpeco Pajamas</li>
     <li IfModActive="det.sbdelights">Mods and Shit/Stoneborn Delights</li>
+    <li IfModActiveAll="badoaks.MeatOnAStick,badoaks.MeatOnAStick.expansion">Mods and Shit/Meat on a Stick</li>
     <li IfModActive="vanillaexpanded.vcookestews">Mods and Shit/VCE Stews</li>
     <li IfModActive="vanillaexpanded.vcookesushi">Mods and Shit/VCE Sushi</li>
     <li IfModActive="vanillaexpanded.vbrewe">Mods and Shit/VE Brewing</li>
