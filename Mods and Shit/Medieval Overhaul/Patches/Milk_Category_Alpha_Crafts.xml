@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Crafts</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+		
+	<!-- Yogurt Meal Base -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[@Name = "AC_YoghurtMealBase"]/fixedIngredientFilter</xpath>
+				<value>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[@Name = "AC_YoghurtMealBase"]/defaultIngredientFilter</xpath>
+				<value>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+			
+	<!-- Yogurt -->
+	
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_CookYoghurt"]/ingredients/li/filter [thingDefs/li[text()="Milk"]]</xpath>
+				<value>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_CookYoghurt_Bulk"]/ingredients/li/filter [thingDefs/li[text()="Milk"]]</xpath>
+				<value>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+		
+		</operations>		
+		
+		</match>
+	</Operation>
+
+
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Crafts</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+	<!-- Ricotta -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_MakeRicotta"]/ingredients/li/filter</xpath>
+				<value>
+					<customSummary>milk</customSummary>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_MakeRicotta"]/fixedIngredientFilter</xpath>
+				<value>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_MakeRicotta"]/defaultIngredientFilter</xpath>
+				<value>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+		
+		</operations>		
+		
+		</match>
+	</Operation>
+	
+	
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Crafts</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+	<!-- Churn Butter -->
+	
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_ChurnButter"]/ingredients/li/filter</xpath>
+				<value>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_ChurnButter"]/fixedIngredientFilter</xpath>
+				<value>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_ChurnButter"]/defaultIngredientFilter</xpath>
+				<value>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+		
+		</operations>		
+		
+		</match>
+	</Operation>
+	
+	
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Crafts</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+	<!-- Sour Cream -->
+	
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_MakeSourCream"]/ingredients/li/filter [thingDefs/li[text()="Milk"]]</xpath>
+				<value>
+					<customSummary>milk</customSummary>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_MakeSourCream"]/fixedIngredientFilter</xpath>
+				<value>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_MakeSourCream"]/defaultIngredientFilter</xpath>
+				<value>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+		
+		</operations>		
+		
+		</match>
+	</Operation>
+	
+	
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Crafts</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+	<!-- Condensed Milk (Vanilla Cooking Expanded) -->
+	
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_MakeCondensedMilk"]/ingredients/li/filter [thingDefs/li[text()="Milk"]]</xpath>
+				<value>
+					<customSummary>milk</customSummary>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_MakeCondensedMilk"]/fixedIngredientFilter</xpath>
+				<value>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_MakeCondensedMilk"]/defaultIngredientFilter</xpath>
+				<value>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+		
+		</operations>		
+		
+		</match>
+	</Operation>
+	
+	
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Crafts</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+	<!-- Buttermilk (Vanilla Brewing Expanded Coffee and Tea + Vanilla Plants Expanded) -->
+	
+			<li MayRequire="VanillaExpanded.VBrewECandT,VanillaExpanded.VPlantsE" Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_MakeButtermilk"]/ingredients/li/filter [thingDefs/li[text()="Milk"]]</xpath>
+				<value>
+					<customSummary>milk</customSummary>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VBrewECandT,VanillaExpanded.VPlantsE" Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_MakeButtermilk"]/fixedIngredientFilter</xpath>
+				<value>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VBrewECandT,VanillaExpanded.VPlantsE" Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_MakeButtermilk"]/defaultIngredientFilter</xpath>
+				<value>
+					<categories>
+						<li>DankPyon_Milk</li>
+					</categories>
+				</value>
+			</li>
+		
+		</operations>		
+		
+		</match>
+	</Operation>
+	
+	
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Crafts</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+	<!-- Hive Confections -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_CraftCuredHiveConfections"]/ingredients/li/filter/thingDefs</xpath>
+				<value>
+					<li>DankPyon_HornetJelly</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_CraftCuredHiveConfections"]/fixedIngredientFilter/thingDefs</xpath>
+				<value>
+					<li>DankPyon_HornetJelly</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "AC_CraftCuredHiveConfections"]/defaultIngredientFilter/thingDefs</xpath>
+				<value>
+					<li>DankPyon_HornetJelly</li>
+				</value>
+			</li>
+		
+		</operations>		
+		
+		</match>
+	</Operation>
+
+</Patch>

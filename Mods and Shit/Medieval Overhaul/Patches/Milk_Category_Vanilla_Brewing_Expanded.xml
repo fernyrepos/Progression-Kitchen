@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Brewing Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+		
+	<!-- Cocktail Meal Base -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[@Name = "VBE_CookCocktailMealBase"]/fixedIngredientFilter/categories</xpath>
+				<value>
+					<li>DankPyon_Milk</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[@Name = "VBE_CookCocktailMealBase"]/defaultIngredientFilter/categories</xpath>
+				<value>
+					<li>DankPyon_Milk</li>
+				</value>
+			</li>
+			
+	<!-- Cocktail Fine Meal Base -->
+	
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[@Name = "VBE_CookCocktailFineMealBase"]/fixedIngredientFilter/categories</xpath>
+				<value>
+					<li>DankPyon_Milk</li>
+				</value>
+			</li>
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[@Name = "VBE_CookCocktailFineMealBase"]/defaultIngredientFilter/categories</xpath>
+				<value>
+					<li>DankPyon_Milk</li>
+				</value>
+			</li>
+
+	<!-- Simple Cocktail -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "VBE_MakeCocktailSimple"]/ingredients/li/filter [thingDefs/li[text()="Milk"]] /categories</xpath>
+				<value>
+					<li>DankPyon_Milk</li>
+				</value>
+			</li>
+			
+	<!-- Fine Cocktail -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "VBE_MakeCocktailFine"]/ingredients/li/filter [thingDefs/li[text()="Milk"]] /categories</xpath>
+				<value>
+					<li>DankPyon_Milk</li>
+				</value>
+			</li>
+			
+	<!-- Lavish Cocktail -->
+			
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "VBE_MakeCocktailLavish"]/ingredients/li/filter [thingDefs/li[text()="Milk"]] /categories</xpath>
+				<value>
+					<li>DankPyon_Milk</li>
+				</value>
+			</li>
+		
+		</operations>		
+		
+		</match>
+	</Operation>
+	
+	
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Brewing Expanded</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Normal</success>
+			<operations>
+			
+	<!-- Gourmet Cocktail (Vanilla Cooking Expanded -->
+	
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[@Name = "VBE_CookGourmetCocktailMealBase"]/fixedIngredientFilter/categories</xpath>
+				<value>
+					<li>DankPyon_Milk</li>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[@Name = "VBE_CookGourmetCocktailMealBase"]/defaultIngredientFilter/categories</xpath>
+				<value>
+					<li>DankPyon_Milk</li>
+				</value>
+			</li>
+			
+			<li MayRequire="VanillaExpanded.VCookE" Class="PatchOperationAdd">
+				<xpath>/Defs/RecipeDef[defName = "VBE_MakeCocktailGourmet"]/ingredients/li/filter [thingDefs/li[text()="Milk"]] /categories</xpath>
+				<value>
+					<li>DankPyon_Milk</li>
+				</value>
+			</li>
+		
+		</operations>		
+		
+		</match>
+	</Operation>
+
+</Patch>
