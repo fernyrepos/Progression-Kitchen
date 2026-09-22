@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<VFETribals.TribalResearchProjectDef>
+		<defName>Ferny_FatKibble</defName>
+		<label>Fat kibble</label>
+		<description>Learn to enrich animal feed with rendered fat for a denser and more nutritious kibble.</description>
+		<baseCost>30</baseCost>
+		<tab>VFET_Basics</tab>
+		<techLevel>Animal</techLevel>
+		<researchViewX>4.00</researchViewX>
+		<researchViewY>0.70</researchViewY>
+		<prerequisites>
+			<li>Ferny_Kibble</li>
+		</prerequisites>
+	</VFETribals.TribalResearchProjectDef>
+
+</Defs>

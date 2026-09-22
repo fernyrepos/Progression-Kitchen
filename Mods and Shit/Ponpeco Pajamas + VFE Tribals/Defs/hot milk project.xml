@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<VFETribals.TribalResearchProjectDef>
+		<defName>Ferny_HotMilk</defName>
+		<label>Hot milk</label>
+		<description>Learn to warm milk into a soothing drink.</description>
+		<baseCost>5</baseCost>
+		<tab>VFET_Basics</tab>
+		<techLevel>Animal</techLevel>
+		<researchViewX>3.00</researchViewX>
+		<researchViewY>0.70</researchViewY>
+		<prerequisites>
+			<li>VFET_AnimalHandling</li>
+		</prerequisites>
+	</VFETribals.TribalResearchProjectDef>
+
+</Defs>

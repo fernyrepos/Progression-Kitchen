@@ -3,7 +3,10 @@
     <li>/</li>
     <li IfModActive="dankpyon.medieval.overhaul">Mods and Shit/Medieval Overhaul</li>
     <li IfModActiveAll="Ludeon.RimWorld.Biotech,OskarPotocki.VFE.Tribals">Mods and Shit/Biotech</li>
+	<li IfModActive="OskarPotocki.VFE.Tribals">Mods and Shit/VFE Tribals</li>
     <li IfModActive="ponpeco.ponpecopajamas">Mods and Shit/Ponpeco Pajamas</li>
+	<li IfModActiveAll="ponpeco.ponpecopajamas,OskarPotocki.VFE.Tribals">Mods and Shit/Ponpeco Pajamas + VFE Tribals</li>
+	<li IfModActiveAll="Papito.MedicinesPlus.AT,OskarPotocki.VFE.Tribals">Mods and Shit/Medicines Plus + VFE Tribals</li>
     <li IfModActive="det.sbdelights">Mods and Shit/Stoneborn Delights</li>
     <li IfModActiveAll="badoaks.MeatOnAStick,badoaks.MeatOnAStick.expansion">Mods and Shit/Meat on a Stick</li>
     <li IfModActive="vanillaexpanded.vcookestews">Mods and Shit/VCE Stews</li>
@@ -11,15 +14,19 @@
     <li IfModActive="vanillaexpanded.vbrewe">Mods and Shit/VE Brewing</li>
     <li IfModActive="vanillaexpanded.vcooke">Mods and Shit/VE Cooking</li>
     <li IfModActiveAll="scpchemfuel.appliances,VanillaExpanded.VChemfuelE">Mods and Shit/Appliances Expanded + Vanilla Chemfuel Expanded</li>
+	<li IfModActiveAll="scpchemfuel.appliances,VanillaExpanded.VChemfuelE,vanillaexpanded.vfeproduction">Mods and Shit/Appliances Expanded + Vanilla Chemfuel Expanded + VFE Production</li>
     <li IfModActiveAll="talias.VFEHardleatherConcrete,vanillaexpanded.vcooke,dankpyon.medieval.overhaul">Mods and Shit/Industrial Hardleather Concrete and Cheese</li>
     <li IfModActive="oskarpotocki.vfe.classical">Mods and Shit/VFE Classical</li>
     <li IfModActive="vanillaexpanded.vfeproduction">Mods and Shit/VFE Production</li>
     <li IfModActive="vanillaexpanded.helixiengas">Mods and Shit/Vanilla Helixien Gas Expanded</li>
+	<li IfModActiveAll="vanillaexpanded.helixiengas,vanillaexpanded.vfeproduction,CiXwOw.HelixienGasProduction">Mods and Shit/Helixien Gas Production</li>
     <li IfModActive="syrchalis.processor.framework">Mods and Shit/Processor Framework</li>
     <li IfModActive="DankPyon.Medieval.Overhaul.House.Roxmont">Mods and Shit/House Roxmont</li>
     <li IfModActive="det.keshig">Mods and Shit/Keshig</li>
     <li IfModActive="Van.Beasts">Mods and Shit/Dark Ages Beasts and Monsters</li>
     <li IfModActive="veterano.mythicages.megafaunabestiary">Mods and Shit/Mythic Ages Megafauna Bestiary</li>
+	<li IfModActiveAll="veterano.mythicages.megafaunabestiary,OskarPotocki.VFE.Tribals">Mods and Shit/Mythic Ages Megafauna Bestiary + VFE Tribals</li>
+	<li IfModActiveAll="veterano.mythicages.megafaunabestiary,dankpyon.medieval.overhaul">Mods and Shit/Mythic Ages Megafauna Bestiary + Medieval Overhaul</li>
     <li IfModActive="sarg.alphacrafts">Mods and Shit/Alpha Crafts</li>
     <li IfModActive="OskarPotocki.VFE.Medieval2">Mods and Shit/VFE Medieval 2</li>
     <li IfModActive="vanillaexpanded.vbrewecandt">Mods and Shit/VBE CAT</li>

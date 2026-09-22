@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="VFE_TableStoveLargeGas"]/researchPrerequisites</xpath>
+		<value>
+			<researchPrerequisites>
+				<li>Ferny_LargeGasPoweredStove</li>
+			</researchPrerequisites>
+		</value>
+	</Operation>
+
+</Patch>

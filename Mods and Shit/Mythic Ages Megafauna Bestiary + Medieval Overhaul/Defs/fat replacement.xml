@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ReplaceLib.ReplacerDef>
+		<defName>Ferny_ProgKitchen_MythicAges_MedievalOverhaul_Fat</defName>
+		<replacers>
+			<li>
+				<replace>MA_WildFat</replace>
+				<with>DankPyon_Fat</with>
+			</li>
+		</replacers>
+	</ReplaceLib.ReplacerDef>
+
+</Defs>

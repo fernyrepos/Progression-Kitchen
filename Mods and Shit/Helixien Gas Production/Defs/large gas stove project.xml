@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>Ferny_LargeGasPoweredStove</defName>
+		<label>Large gas-powered stove</label>
+		<description>Learn to build a large helixien gas-powered stove with multiple cooking stations for faster meal preparation.</description>
+		<baseCost>700</baseCost>
+		<tab>Main</tab>
+		<techLevel>Industrial</techLevel>
+		<researchViewX>6.00</researchViewX>
+		<researchViewY>3.00</researchViewY>
+		<prerequisites>
+			<li>Fabrication</li>
+			<li>Ferny_GasPoweredStove</li>
+		</prerequisites>
+	</ResearchProjectDef>
+
+</Defs>

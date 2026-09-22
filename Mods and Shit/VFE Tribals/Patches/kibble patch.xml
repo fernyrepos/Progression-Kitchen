@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationConditional">
+		<xpath>/Defs/RecipeDef[defName="Make_Kibble"]/researchPrerequisite</xpath>
+		<match Class="PatchOperationReplace">
+			<xpath>/Defs/RecipeDef[defName="Make_Kibble"]/researchPrerequisite</xpath>
+			<value>
+				<researchPrerequisite>Ferny_Kibble</researchPrerequisite>
+			</value>
+		</match>
+		<nomatch Class="PatchOperationAdd">
+			<xpath>/Defs/RecipeDef[defName="Make_Kibble"]</xpath>
+			<value>
+				<researchPrerequisite>Ferny_Kibble</researchPrerequisite>
+			</value>
+		</nomatch>
+	</Operation>
+
+</Patch>

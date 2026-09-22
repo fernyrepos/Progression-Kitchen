@@ -29,4 +29,14 @@
 		</nomatch>
 	</Operation>
 
+	<!-- Large stove -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef[defName="VFE_TableStoveLarge"]/researchPrerequisites</xpath>
+		<value>
+			<researchPrerequisites>
+				<li>Ferny_LargeStove</li>
+			</researchPrerequisites>
+		</value>
+	</Operation>
+
 </Patch>
