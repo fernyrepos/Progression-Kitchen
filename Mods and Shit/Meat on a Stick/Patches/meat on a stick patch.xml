@@ -4,8 +4,10 @@
   <!-- Meat on a Stick + Expansion add 16 near-identical Campfire bills (meat, veg, morsel of meat,
        meat and veg blend, fish, fruit, mushroom, plain stick - each as a single/x4 pair). Consolidate
        them into two: "cook food on a stick" and "cook food on a stick x4", which accept any raw meat,
-       produce or fish and mix freely. The original RecipeDefs/ThingDefs are left in place (only
-       stripped from the Campfire's recipeUsers) so existing saves and cooked meals stay valid. -->
+       produce or fish and mix freely. 14 of the 16 original RecipeDefs/ThingDefs are left in place
+       (only stripped from the Campfire's recipeUsers) so existing saves and cooked meals stay valid;
+       the plain-stick pair (moas_CookStick/moas_CookStick4) is handled separately below since the
+       Expansion patch already deletes those two RecipeDefs entirely. -->
 
   <Operation Class="PatchOperationRemove">
     <xpath>Defs/RecipeDef[defName="CookMeatOnAStick"]/recipeUsers/li[.="Campfire"]</xpath>
@@ -49,12 +51,12 @@
   <Operation Class="PatchOperationRemove">
     <xpath>Defs/RecipeDef[defName="CookFungusOnAStick4"]/recipeUsers/li[.="Campfire"]</xpath>
   </Operation>
-  <Operation Class="PatchOperationRemove">
-    <xpath>Defs/RecipeDef[defName="moas_CookStick"]/recipeUsers/li[.="Campfire"]</xpath>
-  </Operation>
-  <Operation Class="PatchOperationRemove">
-    <xpath>Defs/RecipeDef[defName="moas_CookStick4"]/recipeUsers/li[.="Campfire"]</xpath>
-  </Operation>
+
+  <!-- moas_CookStick / moas_CookStick4 are intentionally NOT patched here: Meat On A Stick
+       Expansion's own patch (Patches/meat on a stick expansion patch.xml) already deletes both
+       RecipeDefs outright. Stripping Campfire from their recipeUsers on top of that has nothing
+       left to match, so it only produced two guaranteed "Failed to find a node with the given
+       xpath" errors on every load. -->
 
   <!-- None of the 8 original meal items (base "meat" plus the Expansion's 7 typed variants) can be
        cooked anymore, so they're just clutter as separate stockpile/bill filter checkboxes now. None
